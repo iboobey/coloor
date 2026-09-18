@@ -1,0 +1,20 @@
+[gd_resource type="Theme" format=3 uid="uid://cy4qwwnf84sao"]
+
+[ext_resource type="Texture2D" uid="uid://c7pei3qvyd6jl" path="res://graphics/SkillTreeButtonsTest.png" id="1_g07o6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51bdh"]
+texture = ExtResource("1_g07o6")
+region_rect = Rect2(0, 0, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ty3n3"]
+texture = ExtResource("1_g07o6")
+region_rect = Rect2(0, 0, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnam6"]
+texture = ExtResource("1_g07o6")
+region_rect = Rect2(8, 0, 8, 8)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_51bdh")
+Button/styles/normal = SubResource("StyleBoxTexture_ty3n3")
+Button/styles/pressed = SubResource("StyleBoxTexture_tnam6")
