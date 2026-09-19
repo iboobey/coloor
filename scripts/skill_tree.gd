@@ -42,7 +42,7 @@ func button_pressed(button : Button):
 
 func _process(_delta: float) -> void:
 	$Jump.text = "Jump Level: " + str(ability_levels[0])
-	$Strength.text = "Strengt Level: " + str(ability_levels[1])
+	$Strength.text = "Strength Level: " + str(ability_levels[1])
 	$Dash.text = "Dash Level: " + str(ability_levels[2])
 
 
