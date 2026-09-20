@@ -1,37 +1,15 @@
 [gd_scene format=3 uid="uid://can508vidmw2j"]
 
 [ext_resource type="PackedScene" uid="uid://bnhdw7wjf6a5k" path="res://scenes/blobby.tscn" id="1_80nbo"]
-[ext_resource type="Texture2D" uid="uid://bhdkpvw7lbcbb" path="res://graphics/level 1 glass.png" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bhh8iggf624rf" path="res://scenes/Level1Glass.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b5gl6hkts3o8b" path="res://scenes/platform.tscn" id="3_feb5d"]
-[ext_resource type="PackedScene" uid="uid://bky7poaewanr5" path="res://scenes/bullet.tscn" id="4_fc0e3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7wsd"]
-
-[sub_resource type="GDScript" id="GDScript_7jktm"]
-resource_name = "glass"
-script/source = "extends StaticBody2D
-func _ready() -> void:
-	add_to_group(\"enemies\")
-"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7wsd"]
-size = Vector2(6, 26)
-
-[sub_resource type="GDScript" id="GDScript_ryrav"]
-script/source = "extends CollisionShape2D
-func _ready() -> void:
-	add_to_group(\"enemies\")
-"
-
-[sub_resource type="GDScript" id="GDScript_eow3j"]
-script/source = "extends Sprite2D
-func _ready() -> void:
-	add_to_group(\"enemies\")
-"
 
 [node name="Node2D" type="Node2D" unique_id=1990118999]
 
 [node name="Blobby" parent="." unique_id=1304802922 instance=ExtResource("1_80nbo")]
+position = Vector2(-58, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=234405383]
 
@@ -39,147 +17,14 @@ func _ready() -> void:
 position = Vector2(0, 5)
 shape = SubResource("WorldBoundaryShape2D_s7wsd")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1734717546]
-script = SubResource("GDScript_7jktm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1396029831]
-position = Vector2(43, -11)
-shape = SubResource("RectangleShape2D_s7wsd")
-script = SubResource("GDScript_ryrav")
-
-[node name="Level1Glass" type="Sprite2D" parent="StaticBody2D2" unique_id=390791830]
-position = Vector2(44, -13)
-texture = ExtResource("2_e2o6t")
-script = SubResource("GDScript_eow3j")
-
 [node name="Node2D" parent="." unique_id=365567467 instance=ExtResource("3_feb5d")]
-position = Vector2(22, -8)
+position = Vector2(31, -20)
 
-[node name="Node2D2" parent="." unique_id=479499574 instance=ExtResource("3_feb5d")]
-position = Vector2(-36, -21)
+[node name="Node2D2" parent="." unique_id=583905851 instance=ExtResource("3_feb5d")]
+position = Vector2(-2, -9)
 
-[node name="Node2D3" parent="." unique_id=1714158070 instance=ExtResource("3_feb5d")]
-position = Vector2(18, -44)
+[node name="Node2D3" parent="." unique_id=645117099 instance=ExtResource("3_feb5d")]
+position = Vector2(-32, 1)
 
-[node name="Node2D4" parent="." unique_id=1033381294 instance=ExtResource("3_feb5d")]
-position = Vector2(-70, -56)
-
-[node name="Node2D5" parent="." unique_id=618783926 instance=ExtResource("3_feb5d")]
-position = Vector2(-26, -73)
-
-[node name="Node2D6" parent="." unique_id=206224662 instance=ExtResource("3_feb5d")]
-position = Vector2(40, -75)
-
-[node name="Node2D7" parent="." unique_id=1846665184 instance=ExtResource("3_feb5d")]
-position = Vector2(84, -88)
-
-[node name="Node2D8" parent="." unique_id=699254161 instance=ExtResource("3_feb5d")]
-position = Vector2(147, -103)
-
-[node name="Node2D9" parent="." unique_id=216887786 instance=ExtResource("3_feb5d")]
-position = Vector2(198, -125)
-
-[node name="Node2D10" parent="." unique_id=514517711 instance=ExtResource("3_feb5d")]
-position = Vector2(246, -159)
-
-[node name="Node2D11" parent="." unique_id=1802400006 instance=ExtResource("3_feb5d")]
-position = Vector2(286, -204)
-
-[node name="Node2D12" parent="." unique_id=983423264 instance=ExtResource("3_feb5d")]
-position = Vector2(348, -230)
-
-[node name="Node2D13" parent="." unique_id=1166284046 instance=ExtResource("3_feb5d")]
-position = Vector2(311, -278)
-
-[node name="Node2D14" parent="." unique_id=1821298889 instance=ExtResource("3_feb5d")]
-position = Vector2(377, -296)
-
-[node name="Node2D15" parent="." unique_id=1406420808 instance=ExtResource("3_feb5d")]
-position = Vector2(432, -330)
-
-[node name="Node2D16" parent="." unique_id=1515759334 instance=ExtResource("3_feb5d")]
-position = Vector2(402, -397)
-
-[node name="Node2D17" parent="." unique_id=2020221581 instance=ExtResource("3_feb5d")]
-position = Vector2(462, -376)
-
-[node name="Node2D18" parent="." unique_id=1955869840 instance=ExtResource("3_feb5d")]
-position = Vector2(430, -443)
-
-[node name="Node2D19" parent="." unique_id=93612746 instance=ExtResource("3_feb5d")]
-position = Vector2(399, -472)
-
-[node name="Node2D20" parent="." unique_id=1930348148 instance=ExtResource("3_feb5d")]
-position = Vector2(404, -480)
-
-[node name="Node2D21" parent="." unique_id=1361747492 instance=ExtResource("3_feb5d")]
-position = Vector2(410, -486)
-
-[node name="Node2D22" parent="." unique_id=1412739751 instance=ExtResource("3_feb5d")]
-position = Vector2(415, -493)
-
-[node name="Node2D23" parent="." unique_id=387674933 instance=ExtResource("3_feb5d")]
-position = Vector2(461, -471)
-
-[node name="Node2D24" parent="." unique_id=1126183602 instance=ExtResource("3_feb5d")]
-position = Vector2(466, -477)
-
-[node name="Node2D25" parent="." unique_id=1735386921 instance=ExtResource("3_feb5d")]
-position = Vector2(473, -485)
-
-[node name="Node2D26" parent="." unique_id=581949230 instance=ExtResource("3_feb5d")]
-position = Vector2(475, -492)
-
-[node name="Node2D27" parent="." unique_id=421202941 instance=ExtResource("3_feb5d")]
-position = Vector2(447, -516)
-
-[node name="Node2D28" parent="." unique_id=188438866 instance=ExtResource("3_feb5d")]
-position = Vector2(527, -523)
-
-[node name="Node2D29" parent="." unique_id=196752500 instance=ExtResource("3_feb5d")]
-position = Vector2(577, -556)
-
-[node name="Node2D30" parent="." unique_id=1069985151 instance=ExtResource("3_feb5d")]
-position = Vector2(627, -603)
-
-[node name="Node2D31" parent="." unique_id=1605797783 instance=ExtResource("3_feb5d")]
-position = Vector2(647, -603)
-
-[node name="Node2D32" parent="." unique_id=1725851223 instance=ExtResource("3_feb5d")]
-position = Vector2(666, -603)
-
-[node name="Node2D33" parent="." unique_id=718079117 instance=ExtResource("3_feb5d")]
-position = Vector2(648, -609)
-
-[node name="Node2D34" parent="." unique_id=1865259904 instance=ExtResource("3_feb5d")]
-position = Vector2(668, -609)
-
-[node name="Node2D35" parent="." unique_id=1568045182 instance=ExtResource("3_feb5d")]
-position = Vector2(669, -614)
-
-[node name="Node2D36" parent="." unique_id=2019535967 instance=ExtResource("3_feb5d")]
-position = Vector2(727, -634)
-
-[node name="Node2D37" parent="." unique_id=1227327662 instance=ExtResource("3_feb5d")]
-position = Vector2(748, -634)
-
-[node name="Node2D38" parent="." unique_id=1358789485 instance=ExtResource("3_feb5d")]
-position = Vector2(777, -670)
-
-[node name="Node2D39" parent="." unique_id=830820383 instance=ExtResource("3_feb5d")]
-position = Vector2(844, -688)
-
-[node name="Node2D40" parent="." unique_id=890805682 instance=ExtResource("3_feb5d")]
-position = Vector2(924, -68)
-
-[node name="Node2D41" parent="." unique_id=221623585 instance=ExtResource("3_feb5d")]
-position = Vector2(943, -74)
-
-[node name="Node2D42" parent="." unique_id=792107085 instance=ExtResource("3_feb5d")]
-position = Vector2(904, -74)
-
-[node name="Bullet" parent="." unique_id=5470666 instance=ExtResource("4_fc0e3")]
-position = Vector2(13, -62)
-
-[node name="Bullet2" parent="." unique_id=2036847326 instance=ExtResource("4_fc0e3")]
-position = Vector2(27, -16)
+[node name="StaticBody2D2" parent="." unique_id=1814081699 instance=ExtResource("2_e2o6t")]
+position = Vector2(58, -17)
