@@ -56,48 +56,62 @@ size_flags_vertical = 3
 script = ExtResource("1_ty3n3")
 skill_tree_button_group = ExtResource("2_a302t")
 
-[node name="JumpLabel" type="Label" parent="SkillTree" unique_id=843595519]
-layout_mode = 0
-offset_left = 101.3125
-offset_top = 196.0
-offset_right = 508.3125
-offset_bottom = 306.0
-scale = Vector2(0.08, 0.08)
-theme_override_font_sizes/font_size = 80
-text = "label[]"
+[node name="SkillLinks" type="Control" parent="SkillTree" unique_id=1207525404]
+z_index = -1
+anchors_preset = 0
 
-[node name="DashLabel" type="Label" parent="SkillTree" unique_id=1502791036]
-layout_mode = 0
-offset_left = 100.875
-offset_top = 202.0625
-offset_right = 507.875
-offset_bottom = 312.0625
-scale = Vector2(0.08, 0.08)
-theme_override_font_sizes/font_size = 80
-text = "label[]"
+[node name="LinksHorizontal1" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1709309466 groups=["SkillLinks"]]
+unique_name_in_owner = true
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
 
-[node name="StrengthLabel" type="Label" parent="SkillTree" unique_id=1655816797]
-layout_mode = 0
-offset_left = 101.1875
-offset_top = 208.1875
-offset_right = 508.1875
-offset_bottom = 318.1875
-scale = Vector2(0.08, 0.08)
-theme_override_font_sizes/font_size = 80
-text = "label[]"
+[node name="LinksHorizontal2" type="Line2D" parent="SkillTree/SkillLinks" unique_id=520743930 groups=["SkillLinks"]]
+unique_name_in_owner = true
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksHorizontal3" type="Line2D" parent="SkillTree/SkillLinks" unique_id=35701402 groups=["SkillLinks"]]
+unique_name_in_owner = true
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksHorizontal4" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1511614242 groups=["SkillLinks"]]
+unique_name_in_owner = true
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksVertical1" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1293634640 groups=["SkillLinks"]]
+unique_name_in_owner = true
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksVertical2" type="Line2D" parent="SkillTree/SkillLinks" unique_id=982828460 groups=["SkillLinks"]]
+unique_name_in_owner = true
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksVertical3" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1489850361 groups=["SkillLinks"]]
+unique_name_in_owner = true
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksVertical4" type="Line2D" parent="SkillTree/SkillLinks" unique_id=386024195 groups=["SkillLinks"]]
+unique_name_in_owner = true
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
 
 [node name="ButtonArrangement" type="VBoxContainer" parent="SkillTree" unique_id=1200222366]
 layout_mode = 0
-offset_left = 46.5
-offset_top = 199.625
-offset_right = 94.5
-offset_bottom = 247.625
-theme_override_constants/separation = 2
+offset_left = 41.875
+offset_top = 189.0
+offset_right = 113.875
+offset_bottom = 261.0
+theme_override_constants/separation = 8
 
 [node name="Row5" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1776131368]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 2
+theme_override_constants/separation = 8
 
 [node name="Row5Button1" type="Button" parent="SkillTree/ButtonArrangement/Row5" unique_id=1574208358]
 unique_name_in_owner = true
@@ -112,7 +126,7 @@ button_group = ExtResource("2_a302t")
 [node name="Row4" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1789153233]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 2
+theme_override_constants/separation = 8
 
 [node name="Row4Button1" type="Button" parent="SkillTree/ButtonArrangement/Row4" unique_id=869472832]
 unique_name_in_owner = true
@@ -137,7 +151,7 @@ button_group = ExtResource("2_a302t")
 [node name="Row3" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1404867867]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 2
+theme_override_constants/separation = 8
 
 [node name="Row3Button1" type="Button" parent="SkillTree/ButtonArrangement/Row3" unique_id=1110575212]
 unique_name_in_owner = true
@@ -172,7 +186,7 @@ button_group = ExtResource("2_a302t")
 [node name="Row2" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=2132514169]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 2
+theme_override_constants/separation = 8
 
 [node name="Row2Button1" type="Button" parent="SkillTree/ButtonArrangement/Row2" unique_id=1437143242]
 unique_name_in_owner = true
@@ -217,7 +231,7 @@ button_group = ExtResource("2_a302t")
 [node name="Row1" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1040766272]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 2
+theme_override_constants/separation = 8
 
 [node name="Row1Button1" type="Button" parent="SkillTree/ButtonArrangement/Row1" unique_id=1315318979]
 unique_name_in_owner = true
@@ -269,7 +283,12 @@ theme = ExtResource("3_tyjg3")
 toggle_mode = true
 button_group = ExtResource("2_a302t")
 
-[node name="JumpButton" type="Button" parent="SkillTree" unique_id=1216037708]
+[node name="Control" type="Control" parent="SkillTree" unique_id=1465049626]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="JumpButton" type="Button" parent="SkillTree/Control" unique_id=1216037708]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(8, 8)
 custom_maximum_size = Vector2(8, 8)
@@ -282,7 +301,7 @@ size_flags_horizontal = 3
 theme = ExtResource("3_tyjg3")
 toggle_mode = true
 
-[node name="DashButton" type="Button" parent="SkillTree" unique_id=1205408577]
+[node name="DashButton" type="Button" parent="SkillTree/Control" unique_id=1205408577]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(8, 8)
 custom_maximum_size = Vector2(8, 8)
@@ -295,7 +314,7 @@ size_flags_horizontal = 3
 theme = ExtResource("3_tyjg3")
 toggle_mode = true
 
-[node name="StrengthButton" type="Button" parent="SkillTree" unique_id=26103740]
+[node name="StrengthButton" type="Button" parent="SkillTree/Control" unique_id=26103740]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(8, 8)
 custom_maximum_size = Vector2(8, 8)
@@ -308,6 +327,39 @@ size_flags_horizontal = 3
 theme = ExtResource("3_tyjg3")
 toggle_mode = true
 
-[connection signal="toggled" from="SkillTree/JumpButton" to="SkillTree" method="_on_jump_button_toggled"]
-[connection signal="toggled" from="SkillTree/DashButton" to="SkillTree" method="_on_dash_button_toggled"]
-[connection signal="toggled" from="SkillTree/StrengthButton" to="SkillTree" method="_on_strength_button_toggled"]
+[node name="JumpLabel" type="Label" parent="SkillTree/Control" unique_id=843595519]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 101.3125
+offset_top = 196.0
+offset_right = 508.3125
+offset_bottom = 306.0
+scale = Vector2(0.08, 0.08)
+theme_override_font_sizes/font_size = 80
+text = "label[]"
+
+[node name="DashLabel" type="Label" parent="SkillTree/Control" unique_id=1502791036]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 97.375
+offset_top = 202.25
+offset_right = 504.375
+offset_bottom = 312.25
+scale = Vector2(0.08, 0.08)
+theme_override_font_sizes/font_size = 80
+text = "label[]"
+
+[node name="StrengthLabel" type="Label" parent="SkillTree/Control" unique_id=1655816797]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 101.1875
+offset_top = 208.1875
+offset_right = 508.1875
+offset_bottom = 318.1875
+scale = Vector2(0.08, 0.08)
+theme_override_font_sizes/font_size = 80
+text = "label[]"
+
+[connection signal="toggled" from="SkillTree/Control/JumpButton" to="SkillTree" method="_on_jump_button_toggled"]
+[connection signal="toggled" from="SkillTree/Control/DashButton" to="SkillTree" method="_on_dash_button_toggled"]
+[connection signal="toggled" from="SkillTree/Control/StrengthButton" to="SkillTree" method="_on_strength_button_toggled"]
