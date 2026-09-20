@@ -6,6 +6,10 @@ extends CharacterBody2D
 
 
 func _physics_process(delta: float) -> void:
+	if velocity.x > 0:
+		$Sprite2D.flip_h = false 
+	elif velocity.x < 0:
+		$Sprite2D.flip_h = true 
 	$Sprite2D.modulate = Color.from_rgba8(Global.player_red, Global.player_green, Global.player_blue)
 	
 	if not is_on_floor():
