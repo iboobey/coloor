@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-
+@export var dash_cooldown: float= 0.2
+@export var dash_speed = 500.0
 @export var walk_speed = 100.0
 @export var jump_power = -300.0
 
@@ -34,6 +35,13 @@ func move(delta):
 
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = jump_power
+
+
+	var directiondash:= Input.get_axis("dedash","dash")
+	if directiondash:
+		velocity.x = directiondash * dash_speed
+	else:
+		velocity.x = move_toward(velocity.x, 0, dash_speed)
 
 	var direction := Input.get_axis("left", "right")
 	if direction:
