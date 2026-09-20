@@ -5,6 +5,23 @@
 [ext_resource type="Texture2D" uid="uid://bbesv3tnusah1" path="res://graphics/BlobbyAnimation.png" id="2_4ytvr"]
 [ext_resource type="ButtonGroup" uid="uid://c451cxxkb11dm" path="res://resources/skill_tree_button_group.tres" id="2_a302t"]
 [ext_resource type="Theme" uid="uid://cy4qwwnf84sao" path="res://resources/themes/skill_tree_theme.tres" id="3_tyjg3"]
+[ext_resource type="Script" uid="uid://chsow7ppywhsr" path="res://scenes/skill_links.gd" id="5_v86rl"]
+[ext_resource type="Shader" uid="uid://cm0j1b5q1ki4y" path="res://resources/shaders/skill_links.gdshader" id="6_13sgg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g3eks"]
+resource_local_to_scene = true
+shader = ExtResource("6_13sgg")
+shader_parameter/line_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/segment_color = Color(1, 1, 0, 0)
+shader_parameter/segment_start = 0.0
+shader_parameter/segment_end = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i6lef"]
+shader = ExtResource("6_13sgg")
+shader_parameter/line_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/segment_color = Color(1, 1, 0, 0)
+shader_parameter/segment_start = 0.0
+shader_parameter/segment_end = 0.0
 
 [node name="Menu" type="Node2D" unique_id=1670900020]
 script = ExtResource("1_mhnvy")
@@ -59,44 +76,77 @@ skill_tree_button_group = ExtResource("2_a302t")
 [node name="SkillLinks" type="Control" parent="SkillTree" unique_id=1207525404]
 z_index = -1
 anchors_preset = 0
+script = ExtResource("5_v86rl")
 
 [node name="LinksHorizontal1" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1709309466 groups=["SkillLinks"]]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_g3eks")
 points = PackedVector2Array(43.5, 257.125)
 width = 2.5
 
 [node name="LinksHorizontal2" type="Line2D" parent="SkillTree/SkillLinks" unique_id=520743930 groups=["SkillLinks"]]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
 points = PackedVector2Array(43.5, 257.125)
 width = 2.5
 
 [node name="LinksHorizontal3" type="Line2D" parent="SkillTree/SkillLinks" unique_id=35701402 groups=["SkillLinks"]]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
 points = PackedVector2Array(43.5, 257.125)
 width = 2.5
 
 [node name="LinksHorizontal4" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1511614242 groups=["SkillLinks"]]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
 points = PackedVector2Array(43.5, 257.125)
 width = 2.5
 
-[node name="LinksVertical1" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1293634640 groups=["SkillLinks"]]
+[node name="LinksVerticalLeft1" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1293634640 groups=["SkillLinks"]]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
 points = PackedVector2Array(43.5, 257.125)
 width = 2.5
 
-[node name="LinksVertical2" type="Line2D" parent="SkillTree/SkillLinks" unique_id=982828460 groups=["SkillLinks"]]
+[node name="LinksVerticalLeft2" type="Line2D" parent="SkillTree/SkillLinks" unique_id=982828460 groups=["SkillLinks"]]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
 points = PackedVector2Array(43.5, 257.125)
 width = 2.5
 
-[node name="LinksVertical3" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1489850361 groups=["SkillLinks"]]
+[node name="LinksVerticalLeft3" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1489850361 groups=["SkillLinks"]]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
 points = PackedVector2Array(43.5, 257.125)
 width = 2.5
 
-[node name="LinksVertical4" type="Line2D" parent="SkillTree/SkillLinks" unique_id=386024195 groups=["SkillLinks"]]
+[node name="LinksVerticalLeft4" type="Line2D" parent="SkillTree/SkillLinks" unique_id=386024195 groups=["SkillLinks"]]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksVerticalRight1" type="Line2D" parent="SkillTree/SkillLinks" unique_id=299593148 groups=["SkillLinks"]]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksVerticalRight2" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1403756381 groups=["SkillLinks"]]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksVerticalRight3" type="Line2D" parent="SkillTree/SkillLinks" unique_id=11841680 groups=["SkillLinks"]]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
+points = PackedVector2Array(43.5, 257.125)
+width = 2.5
+
+[node name="LinksVerticalRight4" type="Line2D" parent="SkillTree/SkillLinks" unique_id=1588535921 groups=["SkillLinks"]]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_i6lef")
 points = PackedVector2Array(43.5, 257.125)
 width = 2.5
 

@@ -6,11 +6,20 @@ extends Control
 @onready var links_horizontal_2 : Line2D = %LinksHorizontal2
 @onready var links_horizontal_3 : Line2D = %LinksHorizontal3
 @onready var links_horizontal_4 : Line2D = %LinksHorizontal4
-@onready var links_vertical_1: Line2D = %LinksVertical1
-@onready var links_vertical_2 : Line2D = %LinksVertical2
-@onready var links_vertical_3 : Line2D = %LinksVertical3
-@onready var links_vertical_4 : Line2D = %LinksVertical4
 @onready var links_horizontal : Array = [links_horizontal_1, links_horizontal_2, links_horizontal_3, links_horizontal_4]
+
+@onready var links_vertical_left_1: Line2D = %LinksVerticalLeft1
+@onready var links_vertical_left_2: Line2D = %LinksVerticalLeft2
+@onready var links_vertical_left_3: Line2D = %LinksVerticalLeft3
+@onready var links_vertical_left_4: Line2D = %LinksVerticalLeft4
+@onready var links_vertical_left : Array = [links_vertical_left_1, links_vertical_left_2, links_vertical_left_3, links_vertical_left_4,]
+
+@onready var links_vertical_right_1: Line2D = %LinksVerticalRight1
+@onready var links_vertical_right_2: Line2D = %LinksVerticalRight2
+@onready var links_vertical_right_3: Line2D = %LinksVerticalRight3
+@onready var links_vertical_right_4: Line2D = %LinksVerticalRight4
+@onready var links_vertical_right : Array = [links_vertical_right_1, links_vertical_right_2, links_vertical_right_3, links_vertical_right_4,]
+
 
 
 
@@ -183,12 +192,35 @@ func skill_linking():
 	 %Row2Button1.global_position / 8,
 	 %Row3Button1.global_position / 8,
 	 %Row4Button1.global_position / 8]
-	
-	var h_step = Vector2(+16,0)
+	var h_step = Vector2(16,0)
 	var h_points : int = 5
+	
+	var v_right_start_array : Array = [%Row1Button1.global_position / 8,
+	 %Row1Button2.global_position / 8,
+	 %Row1Button3.global_position / 8,
+	 %Row1Button4.global_position / 8]
+	var v_right_step = Vector2(8,-16)
+	var v_right_points : int = 5
+	
+	var v_left_start_array : Array = [%Row1Button5.global_position / 8, %Row1Button4.global_position / 8, %Row1Button3.global_position / 8, %Row1Button2.global_position / 8]
+	var v_left_step = Vector2(-8,-16)
+	var v_left_points : int = 5
+	
+	
 	
 	for i in range(links_horizontal.size()):
 		for point in range(h_points):
-			links_horizontal[i].add_point(h_start_array[i] + link_correction_offset + point * h_step)
+			links_horizontal[i].add_point(h_start_array[i] + (point * h_step) + link_correction_offset)
+			links_horizontal[i].default_color = Color(1.0, 0.0, 0.078, 1.0)
 		h_points -= 1
 	
+	for i in range(links_vertical_right.size()):
+		for point in range(v_right_points):
+			links_vertical_right[i].add_point(v_right_start_array[i] + (point * v_right_step) + link_correction_offset)
+			links_vertical_right[i].default_color = Color(0.0, 0.41, 1.0, 1.0)
+		v_right_points -= 1
+	
+	for i in range(links_vertical_left.size()):
+		for point in range(v_left_points):
+			links_vertical_left[i].add_point(v_left_start_array[i] + (point * v_left_step) + link_correction_offset)
+		v_left_points -= 1
