@@ -1,5 +1,5 @@
 extends Node
 
-var player_red : float = 255
-var player_green : float = 255
-var player_blue : float = 255
+var player_red : int = 255
+var player_green : int = 255
+var player_blue : int = 255
