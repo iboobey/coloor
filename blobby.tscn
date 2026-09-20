@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnhdw7wjf6a5k"]
 
-[ext_resource type="Script" path="res://blobby.gd" id="1_qp7fk"]
-[ext_resource type="Texture2D" path="res://graphics/blobby base.png" id="1_r5lao"]
+[ext_resource type="Script" uid="uid://b6oqe1g4i0ag4" path="res://blobby.gd" id="1_qp7fk"]
+[ext_resource type="Texture2D" uid="uid://b8y2m46jrv816" path="res://icon.svg" id="2_qp7fk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7wsd"]
 radius = 6.0
@@ -15,4 +15,4 @@ shape = SubResource("CircleShape2D_s7wsd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1030650629]
 position = Vector2(0, -7)
-texture = ExtResource("1_r5lao")
+texture = ExtResource("2_qp7fk")
