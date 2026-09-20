@@ -6,6 +6,8 @@ extends CharacterBody2D
 
 
 func _physics_process(delta: float) -> void:
+	$Sprite2D.modulate = Color.from_rgba8(Global.player_red, Global.player_green, Global.player_blue)
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -19,11 +21,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, walk_speed)
 
 	move_and_slide()
-
-	if velocity.x > 0:
-		$Sprite2D.flip_h = false 
-	elif velocity.x < 0:
-		$Sprite2D.flip_h = true 
 
 const BULLET_SCENE=preload("res://scenes/bullet.tscn")
 @export var shoot_cooldown: float = 0.5

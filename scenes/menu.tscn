@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bbesv3tnusah1" path="res://graphics/BlobbyAnimation.png" id="2_4ytvr"]
 [ext_resource type="ButtonGroup" uid="uid://c451cxxkb11dm" path="res://resources/skill_tree_button_group.tres" id="2_a302t"]
 [ext_resource type="Theme" uid="uid://cy4qwwnf84sao" path="res://resources/themes/skill_tree_theme.tres" id="3_tyjg3"]
-[ext_resource type="Script" uid="uid://chsow7ppywhsr" path="res://scenes/skill_links.gd" id="5_v86rl"]
+[ext_resource type="Script" uid="uid://chsow7ppywhsr" path="res://scripts/skill_links.gd" id="5_v86rl"]
 [ext_resource type="Shader" uid="uid://cm0j1b5q1ki4y" path="res://resources/shaders/skill_links.gdshader" id="6_13sgg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g3eks"]

@@ -5,7 +5,7 @@ extends Node2D
 var red = Global.player_red
 var green = Global.player_green
 var blue = Global.player_blue
-var player_module : Color = Color.from_rgba8(red,green,blue)
+var player_module : Color = Color(red,green,blue)
 
 
 func _process(_delta: float) -> void:
