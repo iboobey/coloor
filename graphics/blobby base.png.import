@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7pei3qvyd6jl"
-path="res://.godot/imported/SkillTreeButtonsTest.png-2ebd3300c6be2406d157335e2d729d69.ctex"
+uid="uid://diec86vttdueq"
+path="res://.godot/imported/blobby base.png-5d79158a9abda93ab489295ad75c0eea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/SkillTreeButtonsTest.png"
-dest_files=["res://.godot/imported/SkillTreeButtonsTest.png-2ebd3300c6be2406d157335e2d729d69.ctex"]
+source_file="res://graphics/blobby base.png"
+dest_files=["res://.godot/imported/blobby base.png-5d79158a9abda93ab489295ad75c0eea.ctex"]
 
 [params]
 

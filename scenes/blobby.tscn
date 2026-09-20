@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bnhdw7wjf6a5k"]
 
-[ext_resource type="Script" uid="uid://b6oqe1g4i0ag4" path="res://blobby.gd" id="1_qp7fk"]
-[ext_resource type="Texture2D" uid="uid://b8y2m46jrv816" path="res://icon.svg" id="2_qp7fk"]
+[ext_resource type="Script" uid="uid://b6oqe1g4i0ag4" path="res://scripts/blobby.gd" id="1_oiati"]
+[ext_resource type="Texture2D" uid="uid://diec86vttdueq" path="res://graphics/blobby base.png" id="2_nwil0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7wsd"]
 radius = 6.0
 
 [node name="Blobby" type="CharacterBody2D" unique_id=1304802922]
-script = ExtResource("1_qp7fk")
+script = ExtResource("1_oiati")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396790662]
 position = Vector2(0, -6)
@@ -15,4 +15,7 @@ shape = SubResource("CircleShape2D_s7wsd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1030650629]
 position = Vector2(0, -7)
-texture = ExtResource("2_qp7fk")
+texture = ExtResource("2_nwil0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=379680584]
+zoom = Vector2(4, 4)
