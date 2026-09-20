@@ -6,16 +6,12 @@ extends CharacterBody2D
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = jump_power
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * walk_speed
@@ -23,6 +19,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, walk_speed)
 
 	move_and_slide()
+
+	if velocity.x > 0:
+		$Sprite2D.flip_h = false 
+	elif velocity.x < 0:
+		$Sprite2D.flip_h = true 
 
 const BULLET_SCENE=preload("res://scenes/bullet.tscn")
 @export var shoot_cooldown: float = 0.5

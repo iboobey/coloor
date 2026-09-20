@@ -28,3 +28,12 @@ position = Vector2(-32, 1)
 
 [node name="StaticBody2D2" parent="." unique_id=1814081699 instance=ExtResource("2_e2o6t")]
 position = Vector2(58, -17)
+
+[node name="Node2D4" parent="." unique_id=567626516 instance=ExtResource("3_feb5d")]
+position = Vector2(-37, -20)
+
+[node name="StaticBody2D3" parent="." unique_id=692510174 instance=ExtResource("2_e2o6t")]
+position = Vector2(59, -44)
+
+[node name="StaticBody2D4" parent="." unique_id=1788793448 instance=ExtResource("2_e2o6t")]
+position = Vector2(60, -72)
