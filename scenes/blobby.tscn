@@ -19,3 +19,5 @@ texture = ExtResource("2_nwil0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=379680584]
 zoom = Vector2(4, 4)
+
+[node name="DashTimer" type="Timer" parent="." unique_id=1807839519]
