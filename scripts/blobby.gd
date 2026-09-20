@@ -4,6 +4,10 @@ extends CharacterBody2D
 @export var walk_speed = 100.0
 @export var jump_power = -300.0
 
+const BULLET_SCENE=preload("res://scenes/bullet.tscn")
+
+@export var shoot_cooldown: float = 0.5
+var can_shoot: bool = true
 
 func _physics_process(delta: float) -> void:
 	if velocity.x > 0:
@@ -11,6 +15,19 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x < 0:
 		$Sprite2D.flip_h = true 
 	$Sprite2D.modulate = Color.from_rgba8(Global.player_red, Global.player_green, Global.player_blue)
+	
+	move(delta)
+	move_and_slide()
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("down") and can_shoot:
+		shoot()
+	if event.is_action_pressed("menu"):
+		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func move(delta):
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -24,15 +41,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, walk_speed)
 
-	move_and_slide()
-
-const BULLET_SCENE=preload("res://scenes/bullet.tscn")
-@export var shoot_cooldown: float = 0.5
-var can_shoot: bool = true
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("down") and can_shoot:
-		shoot()
 
 func shoot() -> void:
 	can_shoot = false

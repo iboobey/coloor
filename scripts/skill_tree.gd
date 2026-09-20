@@ -90,9 +90,9 @@ func button_pressed(button : Button):
 			ability_levels = [1,5,1]
 	
 	module_array = ability_levels.map(func(n): return (n-1) * color_step)
-	Global.player_red = module_array[2]
-	Global.player_green = module_array[0]
-	Global.player_blue = module_array[1]
+	Global.player_red = int(module_array[2])
+	Global.player_green = int(module_array[0])
+	Global.player_blue = int(module_array[1])
 	
 
 
@@ -211,13 +211,11 @@ func skill_linking():
 	for i in range(links_horizontal.size()):
 		for point in range(h_points):
 			links_horizontal[i].add_point(h_start_array[i] + (point * h_step) + link_correction_offset)
-			links_horizontal[i].default_color = Color(1.0, 0.0, 0.078, 1.0)
 		h_points -= 1
 	
 	for i in range(links_vertical_right.size()):
 		for point in range(v_right_points):
 			links_vertical_right[i].add_point(v_right_start_array[i] + (point * v_right_step) + link_correction_offset)
-			links_vertical_right[i].default_color = Color(0.0, 0.41, 1.0, 1.0)
 		v_right_points -= 1
 	
 	for i in range(links_vertical_left.size()):

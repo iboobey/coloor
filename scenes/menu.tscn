@@ -31,6 +31,15 @@ z_index = -5
 layout_mode = 3
 anchors_preset = 0
 
+[node name="Button" type="Button" parent="UI" unique_id=1569316801]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 310.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 48
+text = "Game (Tab)"
+
 [node name="PlayerSection" type="ColorRect" parent="UI" unique_id=344101876]
 z_index = -2
 layout_mode = 0
@@ -410,6 +419,7 @@ scale = Vector2(0.08, 0.08)
 theme_override_font_sizes/font_size = 80
 text = "label[]"
 
+[connection signal="pressed" from="UI/Button" to="." method="_on_button_pressed"]
 [connection signal="toggled" from="SkillTree/Control/JumpButton" to="SkillTree" method="_on_jump_button_toggled"]
 [connection signal="toggled" from="SkillTree/Control/DashButton" to="SkillTree" method="_on_dash_button_toggled"]
 [connection signal="toggled" from="SkillTree/Control/StrengthButton" to="SkillTree" method="_on_strength_button_toggled"]
