@@ -7,12 +7,12 @@ size = Vector2(20, 6)
 
 [node name="Node2D" type="Node2D" unique_id=365567467]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1552401532]
+[node name="Platform" type="StaticBody2D" parent="." unique_id=1552401532]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1741870065]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=1741870065]
 position = Vector2(3, -3)
 shape = SubResource("RectangleShape2D_s7wsd")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=950484138]
+[node name="Sprite2D" type="Sprite2D" parent="Platform" unique_id=950484138]
 position = Vector2(3, -3)
 texture = ExtResource("1_mi635")

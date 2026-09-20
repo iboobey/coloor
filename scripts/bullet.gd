@@ -6,7 +6,9 @@ func _physics_process(delta: float) -> void:
 	# Move the bullet horizontally based on direction fired
 	position.x += direction*speed*delta
 # Delete the bullet when it leaves the screen or it hits something
-func _on_body_entered(body:Node2D) -> void:
-	if body.is_in_group("glass"):
-		body.queue_free()
-	queue_free()
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.name == "Level1Glass":
+		area.get_parent().queue_free()
+		queue_free()
