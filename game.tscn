@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://can508vidmw2j"]
 
 [ext_resource type="PackedScene" uid="uid://bnhdw7wjf6a5k" path="res://scenes/blobby.tscn" id="1_80nbo"]
-[ext_resource type="PackedScene" uid="uid://bhh8iggf624rf" path="res://scenes/Level1Glass.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://dtw1xx5gvbyja" path="res://scenes/labplatform.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b5gl6hkts3o8b" path="res://scenes/platform.tscn" id="3_feb5d"]
-[ext_resource type="PackedScene" uid="uid://fx8ogbmmnne6" path="res://scenes/movingplatform.tscn" id="4_fc0e3"]
 
 [sub_resource type="GDScript" id="GDScript_feb5d"]
 script/source = "extends Node2D
@@ -20,25 +19,13 @@ func _on_button_pressed() -> void:
 script = SubResource("GDScript_feb5d")
 
 [node name="Blobby" parent="." unique_id=1304802922 instance=ExtResource("1_80nbo")]
-position = Vector2(-92, -38)
+position = Vector2(-103, -64)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=234405383]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1488637034]
 position = Vector2(0, 5)
 shape = SubResource("WorldBoundaryShape2D_s7wsd")
-
-[node name="Node2D" parent="." unique_id=365567467 instance=ExtResource("3_feb5d")]
-position = Vector2(31, -34)
-
-[node name="Node2D2" parent="." unique_id=583905851 instance=ExtResource("3_feb5d")]
-position = Vector2(-12, -18)
-
-[node name="Node2D3" parent="." unique_id=645117099 instance=ExtResource("3_feb5d")]
-position = Vector2(-57, -32)
-
-[node name="StaticBody2D2" parent="." unique_id=1814081699 instance=ExtResource("2_e2o6t")]
-position = Vector2(79, -51)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1609618423]
 
@@ -50,18 +37,12 @@ offset_bottom = 95.0
 theme_override_font_sizes/font_size = 32
 text = "Menu (Tab)"
 
-[node name="Level1Glass" parent="." unique_id=1121202976 instance=ExtResource("2_e2o6t")]
-position = Vector2(86, -51)
-
-[node name="Node2D4" parent="." unique_id=504525296 instance=ExtResource("3_feb5d")]
-position = Vector2(-94, -30)
-
-[node name="movingplatform" parent="." unique_id=1416219950 instance=ExtResource("4_fc0e3")]
-
-[node name="movingplatform2" parent="." unique_id=1430330131 instance=ExtResource("4_fc0e3")]
-
-[node name="movingplatform3" parent="." unique_id=1420068674 instance=ExtResource("4_fc0e3")]
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=312637075]
+
+[node name="StaticBody2D2" parent="." unique_id=538253402 instance=ExtResource("2_e2o6t")]
+position = Vector2(-96, -32)
+
+[node name="Node2D" parent="." unique_id=365567467 instance=ExtResource("3_feb5d")]
+position = Vector2(-43, -57)
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_button_pressed"]
