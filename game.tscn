@@ -9,7 +9,7 @@
 [node name="Node2D" type="Node2D" unique_id=1990118999]
 
 [node name="Blobby" parent="." unique_id=1304802922 instance=ExtResource("1_80nbo")]
-position = Vector2(-58, 0)
+position = Vector2(-92, -38)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=234405383]
 
@@ -18,13 +18,13 @@ position = Vector2(0, 5)
 shape = SubResource("WorldBoundaryShape2D_s7wsd")
 
 [node name="Node2D" parent="." unique_id=365567467 instance=ExtResource("3_feb5d")]
-position = Vector2(31, -20)
+position = Vector2(31, -34)
 
 [node name="Node2D2" parent="." unique_id=583905851 instance=ExtResource("3_feb5d")]
-position = Vector2(-2, -9)
+position = Vector2(-12, -18)
 
 [node name="Node2D3" parent="." unique_id=645117099 instance=ExtResource("3_feb5d")]
-position = Vector2(-32, 1)
+position = Vector2(-57, -32)
 
 [node name="StaticBody2D2" parent="." unique_id=1814081699 instance=ExtResource("2_e2o6t")]
-position = Vector2(60, -17)
+position = Vector2(79, -51)
