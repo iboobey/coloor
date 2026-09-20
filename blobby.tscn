@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bnhdw7wjf6a5k"]
+
+[ext_resource type="Script" path="res://blobby.gd" id="1_qp7fk"]
+[ext_resource type="Texture2D" path="res://graphics/blobby base.png" id="1_r5lao"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s7wsd"]
+radius = 6.0
+
+[node name="Blobby" type="CharacterBody2D" unique_id=1304802922]
+script = ExtResource("1_qp7fk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396790662]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_s7wsd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1030650629]
+position = Vector2(0, -7)
+texture = ExtResource("1_r5lao")

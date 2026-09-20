@@ -1,0 +1,265 @@
+[gd_scene format=3 uid="uid://cjyaynjj7k57x"]
+
+[ext_resource type="Script" uid="uid://b24lcpokuh08m" path="res://scripts/skill_tree.gd" id="1_ty3n3"]
+[ext_resource type="ButtonGroup" uid="uid://c451cxxkb11dm" path="res://resources/skill_tree_button_group.tres" id="2_a302t"]
+[ext_resource type="Theme" uid="uid://cy4qwwnf84sao" path="res://resources/themes/skill_tree_theme.tres" id="3_tyjg3"]
+
+[node name="SkillTree" type="Node2D" unique_id=1670900020]
+script = ExtResource("1_ty3n3")
+skill_tree_button_group = ExtResource("2_a302t")
+
+[node name="SkillTree" type="Control" parent="." unique_id=1014360433]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(16, 16)
+size_flags_vertical = 3
+
+[node name="ButtonArrangement" type="VBoxContainer" parent="SkillTree" unique_id=1200222366]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 45.0
+theme_override_constants/separation = 2
+
+[node name="Row5" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1776131368]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="Row5Button1" type="Button" parent="SkillTree/ButtonArrangement/Row5" unique_id=1574208358]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row4" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1789153233]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="Row4Button1" type="Button" parent="SkillTree/ButtonArrangement/Row4" unique_id=869472832]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row4Button2" type="Button" parent="SkillTree/ButtonArrangement/Row4" unique_id=1881124604]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row3" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1404867867]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="Row3Button1" type="Button" parent="SkillTree/ButtonArrangement/Row3" unique_id=1110575212]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row3Button2" type="Button" parent="SkillTree/ButtonArrangement/Row3" unique_id=1689611552]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row3Button3" type="Button" parent="SkillTree/ButtonArrangement/Row3" unique_id=276599803]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row2" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=2132514169]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="Row2Button1" type="Button" parent="SkillTree/ButtonArrangement/Row2" unique_id=1437143242]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row2Button2" type="Button" parent="SkillTree/ButtonArrangement/Row2" unique_id=406661320]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row2Button3" type="Button" parent="SkillTree/ButtonArrangement/Row2" unique_id=915088637]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row2Button4" type="Button" parent="SkillTree/ButtonArrangement/Row2" unique_id=308257235]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row1" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1040766272]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="Row1Button1" type="Button" parent="SkillTree/ButtonArrangement/Row1" unique_id=1315318979]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row1Button2" type="Button" parent="SkillTree/ButtonArrangement/Row1" unique_id=1889585837]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row1Button3" type="Button" parent="SkillTree/ButtonArrangement/Row1" unique_id=1032553454]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row1Button4" type="Button" parent="SkillTree/ButtonArrangement/Row1" unique_id=427892921]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Row1Button5" type="Button" parent="SkillTree/ButtonArrangement/Row1" unique_id=1420800624]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+button_group = ExtResource("2_a302t")
+
+[node name="Jump" type="Button" parent="SkillTree" unique_id=1216037708]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 0
+offset_left = 47.3125
+offset_top = 31.0625
+offset_right = 55.3125
+offset_bottom = 39.0625
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+
+[node name="Dash" type="Button" parent="SkillTree" unique_id=1205408577]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 0
+offset_left = 56.9375
+offset_top = 30.875
+offset_right = 64.9375
+offset_bottom = 38.875
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+
+[node name="Strength" type="Button" parent="SkillTree" unique_id=26103740]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(8, 8)
+custom_maximum_size = Vector2(8, 8)
+layout_mode = 0
+offset_left = 66.6875
+offset_top = 30.75
+offset_right = 74.6875
+offset_bottom = 38.75
+size_flags_horizontal = 3
+theme = ExtResource("3_tyjg3")
+toggle_mode = true
+
+[node name="Jump" type="Label" parent="." unique_id=843595519]
+offset_left = 589.0
+offset_top = 20.0
+offset_right = 996.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 80
+text = "label[]"
+
+[node name="Dash" type="Label" parent="." unique_id=1502791036]
+offset_left = 600.0
+offset_top = 124.0
+offset_right = 1007.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 80
+text = "label[]"
+
+[node name="Strength" type="Label" parent="." unique_id=1655816797]
+offset_left = 605.0
+offset_top = 222.0
+offset_right = 1012.0
+offset_bottom = 332.0
+theme_override_font_sizes/font_size = 80
+text = "label[]"
+
+[connection signal="toggled" from="SkillTree/Jump" to="." method="_on_jump_toggled"]
+[connection signal="toggled" from="SkillTree/Dash" to="." method="_on_dash_toggled"]
+[connection signal="toggled" from="SkillTree/Strength" to="." method="_on_strength_toggled"]

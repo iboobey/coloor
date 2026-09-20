@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://can508vidmw2j"]
+
+[ext_resource type="PackedScene" uid="uid://bnhdw7wjf6a5k" path="res://blobby.tscn" id="1_80nbo"]
+[ext_resource type="Texture2D" path="res://graphics/level 1 glass.png" id="2_e2o6t"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7wsd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7wsd"]
+size = Vector2(6, 26)
+
+[node name="Node2D" type="Node2D" unique_id=1990118999]
+
+[node name="Blobby" parent="." unique_id=1304802922 instance=ExtResource("1_80nbo")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1770766696]
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=234405383]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1488637034]
+position = Vector2(0, 5)
+shape = SubResource("WorldBoundaryShape2D_s7wsd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1734717546]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1396029831]
+position = Vector2(43, -11)
+shape = SubResource("RectangleShape2D_s7wsd")
+
+[node name="Level1Glass" type="Sprite2D" parent="StaticBody2D2" unique_id=390791830]
+position = Vector2(44, -13)
+texture = ExtResource("2_e2o6t")
