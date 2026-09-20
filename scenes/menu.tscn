@@ -1,25 +1,97 @@
 [gd_scene format=3 uid="uid://budgr8hgj7on5"]
 
+[ext_resource type="Script" uid="uid://baxvsa322o0bw" path="res://scripts/menu.gd" id="1_mhnvy"]
 [ext_resource type="Script" uid="uid://b24lcpokuh08m" path="res://scripts/skill_tree.gd" id="1_ty3n3"]
+[ext_resource type="Texture2D" uid="uid://bbesv3tnusah1" path="res://graphics/BlobbyAnimation.png" id="2_4ytvr"]
 [ext_resource type="ButtonGroup" uid="uid://c451cxxkb11dm" path="res://resources/skill_tree_button_group.tres" id="2_a302t"]
 [ext_resource type="Theme" uid="uid://cy4qwwnf84sao" path="res://resources/themes/skill_tree_theme.tres" id="3_tyjg3"]
 
-[node name="SkillTree" type="Node2D" unique_id=1670900020]
-script = ExtResource("1_ty3n3")
-skill_tree_button_group = ExtResource("2_a302t")
+[node name="Menu" type="Node2D" unique_id=1670900020]
+script = ExtResource("1_mhnvy")
+
+[node name="UI" type="Control" parent="." unique_id=1614608917]
+z_index = -5
+layout_mode = 3
+anchors_preset = 0
+
+[node name="PlayerSection" type="ColorRect" parent="UI" unique_id=344101876]
+z_index = -2
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 720.0
+color = Color(0.32, 0.2336, 0.060799997, 1)
+
+[node name="Menu" type="ColorRect" parent="UI" unique_id=793473893]
+z_index = -2
+layout_mode = 0
+offset_left = 420.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.58, 0.43325996, 0.19719999, 1)
+
+[node name="MenuButtons" type="ColorRect" parent="UI" unique_id=261007317]
+z_index = -2
+layout_mode = 0
+offset_left = 360.0
+offset_right = 420.0
+offset_bottom = 720.0
+color = Color(0.55, 0.46090004, 0.1045, 1)
+
+[node name="Blobby" type="Sprite2D" parent="UI" unique_id=1318529811]
+position = Vector2(168, 407)
+scale = Vector2(8, 8)
+texture = ExtResource("2_4ytvr")
+region_enabled = true
+region_rect = Rect2(2, 9, 18, 13)
 
 [node name="SkillTree" type="Control" parent="." unique_id=1014360433]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(16, 16)
+offset_left = 93.0
+offset_top = -1423.0
+offset_right = 133.0
+offset_bottom = -1383.0
+scale = Vector2(8, 8)
 size_flags_vertical = 3
+script = ExtResource("1_ty3n3")
+skill_tree_button_group = ExtResource("2_a302t")
+
+[node name="JumpLabel" type="Label" parent="SkillTree" unique_id=843595519]
+layout_mode = 0
+offset_left = 101.3125
+offset_top = 196.0
+offset_right = 508.3125
+offset_bottom = 306.0
+scale = Vector2(0.08, 0.08)
+theme_override_font_sizes/font_size = 80
+text = "label[]"
+
+[node name="DashLabel" type="Label" parent="SkillTree" unique_id=1502791036]
+layout_mode = 0
+offset_left = 100.875
+offset_top = 202.0625
+offset_right = 507.875
+offset_bottom = 312.0625
+scale = Vector2(0.08, 0.08)
+theme_override_font_sizes/font_size = 80
+text = "label[]"
+
+[node name="StrengthLabel" type="Label" parent="SkillTree" unique_id=1655816797]
+layout_mode = 0
+offset_left = 101.1875
+offset_top = 208.1875
+offset_right = 508.1875
+offset_bottom = 318.1875
+scale = Vector2(0.08, 0.08)
+theme_override_font_sizes/font_size = 80
+text = "label[]"
 
 [node name="ButtonArrangement" type="VBoxContainer" parent="SkillTree" unique_id=1200222366]
 layout_mode = 0
-offset_right = 45.0
-offset_bottom = 45.0
+offset_left = 46.5
+offset_top = 199.625
+offset_right = 94.5
+offset_bottom = 247.625
 theme_override_constants/separation = 2
 
 [node name="Row5" type="HBoxContainer" parent="SkillTree/ButtonArrangement" unique_id=1776131368]
@@ -197,69 +269,45 @@ theme = ExtResource("3_tyjg3")
 toggle_mode = true
 button_group = ExtResource("2_a302t")
 
-[node name="Jump" type="Button" parent="SkillTree" unique_id=1216037708]
+[node name="JumpButton" type="Button" parent="SkillTree" unique_id=1216037708]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(8, 8)
 custom_maximum_size = Vector2(8, 8)
 layout_mode = 0
-offset_left = 47.3125
-offset_top = 31.0625
-offset_right = 55.3125
-offset_bottom = 39.0625
+offset_left = 110.6875
+offset_top = 225.375
+offset_right = 118.6875
+offset_bottom = 233.375
 size_flags_horizontal = 3
 theme = ExtResource("3_tyjg3")
 toggle_mode = true
 
-[node name="Dash" type="Button" parent="SkillTree" unique_id=1205408577]
+[node name="DashButton" type="Button" parent="SkillTree" unique_id=1205408577]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(8, 8)
 custom_maximum_size = Vector2(8, 8)
 layout_mode = 0
-offset_left = 56.9375
-offset_top = 30.875
-offset_right = 64.9375
-offset_bottom = 38.875
+offset_left = 120.3125
+offset_top = 225.1875
+offset_right = 128.3125
+offset_bottom = 233.1875
 size_flags_horizontal = 3
 theme = ExtResource("3_tyjg3")
 toggle_mode = true
 
-[node name="Strength" type="Button" parent="SkillTree" unique_id=26103740]
+[node name="StrengthButton" type="Button" parent="SkillTree" unique_id=26103740]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(8, 8)
 custom_maximum_size = Vector2(8, 8)
 layout_mode = 0
-offset_left = 66.6875
-offset_top = 30.75
-offset_right = 74.6875
-offset_bottom = 38.75
+offset_left = 130.0625
+offset_top = 225.0625
+offset_right = 138.0625
+offset_bottom = 233.0625
 size_flags_horizontal = 3
 theme = ExtResource("3_tyjg3")
 toggle_mode = true
 
-[node name="Jump" type="Label" parent="." unique_id=843595519]
-offset_left = 589.0
-offset_top = 20.0
-offset_right = 996.0
-offset_bottom = 130.0
-theme_override_font_sizes/font_size = 80
-text = "label[]"
-
-[node name="Dash" type="Label" parent="." unique_id=1502791036]
-offset_left = 600.0
-offset_top = 124.0
-offset_right = 1007.0
-offset_bottom = 234.0
-theme_override_font_sizes/font_size = 80
-text = "label[]"
-
-[node name="Strength" type="Label" parent="." unique_id=1655816797]
-offset_left = 605.0
-offset_top = 222.0
-offset_right = 1012.0
-offset_bottom = 332.0
-theme_override_font_sizes/font_size = 80
-text = "label[]"
-
-[connection signal="toggled" from="SkillTree/Jump" to="." method="_on_jump_toggled"]
-[connection signal="toggled" from="SkillTree/Dash" to="." method="_on_dash_toggled"]
-[connection signal="toggled" from="SkillTree/Strength" to="." method="_on_strength_toggled"]
+[connection signal="toggled" from="SkillTree/JumpButton" to="SkillTree" method="_on_jump_button_toggled"]
+[connection signal="toggled" from="SkillTree/DashButton" to="SkillTree" method="_on_dash_button_toggled"]
+[connection signal="toggled" from="SkillTree/StrengthButton" to="SkillTree" method="_on_strength_button_toggled"]

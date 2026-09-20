@@ -1,8 +1,8 @@
-extends Node2D
+extends Control
 
 @export var skill_tree_button_group : ButtonGroup
 
-var ability_levels : Array = [1,1,1] # [jump,strenght,dash]
+var ability_levels : Array = [1,1,1] # [jump,strenght,dash] [green,blue,red]
 var jump : int = ability_levels[0]        #top
 var strenght : int = ability_levels[1]     #right
 var dash : int = ability_levels[2]         #left
@@ -11,12 +11,12 @@ var able_to_jump : bool = false
 var able_to_strength : bool = false
 var able_to_dash : bool = false
 
-
+var module_array : Array = []
+var color_step : float = 255.0 / 4.0
 
 func _ready() -> void:
 	for i in skill_tree_button_group.get_buttons():
 		i.disabled = true
-	
 	
 	skill_tree_button_group.pressed.connect(button_pressed)
 
@@ -32,30 +32,51 @@ func button_pressed(button : Button):
 	refresh_toggle(button)
 	
 	match button.name:
-		"Row5Button1": ability_levels = [5,1,1]
-		"Row4Button1": ability_levels = [4,1,2]
-		"Row4Button2": ability_levels = [4,2,1]
-		"Row3Button1": ability_levels = [3,1,3]
-		"Row3Button2": ability_levels = [3,2,2]
-		"Row3Button3": ability_levels = [3,3,1]
-		"Row2Button1": ability_levels = [2,1,4]
-		"Row2Button2": ability_levels = [2,2,3]
-		"Row2Button3": ability_levels = [2,3,2]
-		"Row2Button4": ability_levels = [2,4,1]
-		"Row1Button1": ability_levels = [1,1,5]
-		"Row1Button2": ability_levels = [1,2,4]
-		"Row1Button3": ability_levels = [1,3,3]
-		"Row1Button4": ability_levels = [1,4,2]
-		"Row1Button5": ability_levels = [1,5,1]
+		"Row5Button1":
+			ability_levels = [5,1,1]
+		"Row4Button1":
+			ability_levels = [4,1,2]
+		"Row4Button2":
+			ability_levels = [4,2,1]
+		"Row3Button1":
+			ability_levels = [3,1,3]
+		"Row3Button2":
+			ability_levels = [3,2,2]
+		"Row3Button3":
+			ability_levels = [3,3,1]
+		"Row2Button1":
+			ability_levels = [2,1,4]
+		"Row2Button2":
+			ability_levels = [2,2,3]
+		"Row2Button3":
+			ability_levels = [2,3,2]
+		"Row2Button4":
+			ability_levels = [2,4,1]
+		"Row1Button1":
+			ability_levels = [1,1,5]
+		"Row1Button2":
+			ability_levels = [1,2,4]
+		"Row1Button3":
+			ability_levels = [1,3,3]
+		"Row1Button4":
+			ability_levels = [1,4,2]
+		"Row1Button5":
+			ability_levels = [1,5,1]
+	
+	module_array = ability_levels.map(func(n): return (n-1) * color_step)
+	Global.player_red = module_array[2]
+	Global.player_green = module_array[0]
+	Global.player_blue = module_array[1]
+	
 
 
 func _process(_delta: float) -> void:
 	
 	button_able_disable()
 	
-	$Jump.text = "Jump Level: " + str(ability_levels[0])
-	$Strength.text = "Strength Level: " + str(ability_levels[1])
-	$Dash.text = "Dash Level: " + str(ability_levels[2])
+	$JumpLabel.text = "Jump Level: " + str(ability_levels[0])
+	$DashLabel.text = "Strength Level: " + str(ability_levels[1])
+	$StrengthLabel.text = "Dash Level: " + str(ability_levels[2])
 
 
 func button_able_disable():
@@ -112,21 +133,20 @@ func button_able_disable():
 		%Row2Button3.disabled = true
 
 
-func _on_jump_toggled(toggled_on: bool) -> void:
+func _on_jump_button_toggled(toggled_on: bool) -> void:
 	if toggled_on == true:
 		able_to_jump = true
 	if toggled_on == false:
 		able_to_jump = false
 
 
-func _on_dash_toggled(toggled_on: bool) -> void:
+func _on_dash_button_toggled(toggled_on: bool) -> void:
 	if toggled_on == true:
 		able_to_dash = true
 	if toggled_on == false:
 		able_to_dash = false
 
-
-func _on_strength_toggled(toggled_on: bool) -> void:
+func _on_strength_button_toggled(toggled_on: bool) -> void:
 	if toggled_on == true:
 		able_to_strength = true
 	if toggled_on == false:
