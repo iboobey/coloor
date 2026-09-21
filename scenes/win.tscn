@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bjm1jh5ek7jhb"]
 
-[ext_resource type="Texture2D" uid="uid://cn8b3fiwo7rif" path="res://graphics/MenuUI.png" id="1_wao2c"]
+[ext_resource type="Texture2D" uid="uid://cn8b3fiwo7rif" path="res://graphics/MenuUI.png" id="1_yxbqr"]
+[ext_resource type="Texture2D" uid="uid://bnk7x5h10sbnf" path="res://graphics/confetti.png" id="2_tylv2"]
+[ext_resource type="Texture2D" uid="uid://diec86vttdueq" path="res://graphics/blobby base.png" id="3_5vxan"]
+[ext_resource type="Texture2D" uid="uid://bbesv3tnusah1" path="res://graphics/BlobbyAnimation.png" id="4_4826q"]
 
 [node name="Win" type="Node2D" unique_id=1068553204]
 
@@ -8,7 +11,7 @@
 offset_right = 320.0
 offset_bottom = 180.0
 scale = Vector2(4, 4)
-texture = ExtResource("1_wao2c")
+texture = ExtResource("1_yxbqr")
 region_rect = Rect2(64, 0, 80, 64)
 patch_margin_left = 36
 patch_margin_top = 28
@@ -18,15 +21,47 @@ axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
 [node name="Label" type="Label" parent="." unique_id=1797893302]
-offset_left = 185.0
-offset_top = 81.0
-offset_right = 1464.0
-offset_bottom = 545.0
+offset_left = 181.99998
+offset_top = 120.0
+offset_right = 1461.0
+offset_bottom = 584.0
 scale = Vector2(0.6848449, 0.6848449)
 theme_override_font_sizes/font_size = 32
 text = "
 
 
 
-wow you won congrats or something this is a placeholder obviously"
+wow you won congrats or something this is a placeholder obviously good job yayy"
 autowrap_mode = 3
+
+[node name="Confetti" type="Sprite2D" parent="." unique_id=1581314260]
+position = Vector2(341.5, 390.5)
+scale = Vector2(10.765626, 7.171875)
+texture = ExtResource("2_tylv2")
+
+[node name="Confetti2" type="Sprite2D" parent="." unique_id=1515574677]
+position = Vector2(857, 393.00003)
+scale = Vector2(12.046875, 6.6718755)
+texture = ExtResource("2_tylv2")
+flip_h = true
+
+[node name="BlobbyBase" type="Sprite2D" parent="." unique_id=1889463600]
+position = Vector2(599, 507)
+scale = Vector2(14.2, 16.15)
+texture = ExtResource("3_5vxan")
+
+[node name="Confetti3" type="Sprite2D" parent="." unique_id=782825031]
+position = Vector2(277.5, 118.49999)
+scale = Vector2(5.765625, 3.0156252)
+texture = ExtResource("2_tylv2")
+
+[node name="Confetti4" type="Sprite2D" parent="." unique_id=1526470985]
+position = Vector2(926.25, 123.25)
+scale = Vector2(9.9921875, 4.0234385)
+texture = ExtResource("2_tylv2")
+flip_h = true
+
+[node name="BlobbyAnimation" type="Sprite2D" parent="." unique_id=348230833]
+position = Vector2(594.5, 124.99999)
+scale = Vector2(1.128125, 2.1249998)
+texture = ExtResource("4_4826q")
