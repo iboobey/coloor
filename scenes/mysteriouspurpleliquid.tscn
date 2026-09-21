@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://lpvyrb1pdg78"]
+
+[ext_resource type="Texture2D" uid="uid://8lfswqtk2s51" path="res://graphics/mysteriouspurpleliquid.png" id="1_t34sb"]
+
+[sub_resource type="GDScript" id="GDScript_43dkn"]
+script/source = "extends Area2D
+
+@export var spawn_point: Marker2D
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == \"Blobby\":
+		var spawn_point = get_tree().current_scene.find_child(\"Spawnpoint\",true,false)
+		
+		if spawn_point:
+			body.global_position = spawn_point.global_position
+			
+			if body is CharacterBody2D:
+				body.velocity=Vector2.ZERO
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7wsd"]
+size = Vector2(63.5, 38)
+
+[node name="Area2D" type="Area2D" unique_id=282748131 node_paths=PackedStringArray("spawn_point")]
+script = SubResource("GDScript_43dkn")
+spawn_point = NodePath("")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=744667972]
+z_index = 1
+texture = ExtResource("1_t34sb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=633862237]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_s7wsd")

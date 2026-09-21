@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bjm1jh5ek7jhb"]
+
+[ext_resource type="Texture2D" uid="uid://cn8b3fiwo7rif" path="res://graphics/MenuUI.png" id="1_wao2c"]
+
+[node name="Win" type="Node2D" unique_id=1068553204]
+
+[node name="MenuSection" type="NinePatchRect" parent="." unique_id=1066240697]
+offset_right = 320.0
+offset_bottom = 180.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_wao2c")
+region_rect = Rect2(64, 0, 80, 64)
+patch_margin_left = 36
+patch_margin_top = 28
+patch_margin_right = 36
+patch_margin_bottom = 28
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1797893302]
+offset_left = 185.0
+offset_top = 81.0
+offset_right = 1464.0
+offset_bottom = 545.0
+scale = Vector2(0.6848449, 0.6848449)
+theme_override_font_sizes/font_size = 32
+text = "
+
+
+
+wow you won congrats or something this is a placeholder obviously"
+autowrap_mode = 3
