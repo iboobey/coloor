@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://budgr8hgj7on5"]
+
+[ext_resource type="Script" uid="uid://baxvsa322o0bw" path="res://scripts/menu.gd" id="1_igboo"]
+[ext_resource type="Texture2D" path="res://graphics/MenuUI.png" id="2_iol8j"]
+[ext_resource type="Texture2D" uid="uid://bbesv3tnusah1" path="res://graphics/BlobbyAnimation.png" id="3_tiut4"]
+[ext_resource type="PackedScene" uid="uid://cjyaynjj7k57x" path="res://scenes/MenuScenes/skill_tree.tscn" id="4_hmhl7"]
+[ext_resource type="PackedScene" uid="uid://bv38fl5ht5rv4" path="res://scenes/MenuScenes/blobby_accesories.tscn" id="5_p6lyk"]
+[ext_resource type="Texture2D" uid="uid://bjk6xxwryo1ei" path="res://graphics/menus/MenuLabGUI.png" id="6_giame"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mj5lg"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(48, 2, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6lef"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(32, 82, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70i5f"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(16, 82, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13sgg"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(48, 18, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i42df"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(32, 98, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7jp70"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(16, 98, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufwb2"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(48, 34, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxgkd"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(32, 114, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6gyw"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(16, 114, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cdou"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(48, 50, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3dmrc"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(32, 130, 14, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81l6r"]
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(16, 130, 14, 12)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_igboo"]
+
+[node name="Menu" type="Node2D" unique_id=1670900020]
+script = ExtResource("1_igboo")
+
+[node name="UI" type="Control" parent="." unique_id=1614608917]
+z_index = -5
+layout_mode = 3
+anchors_preset = 0
+
+[node name="PlayerSection" type="NinePatchRect" parent="UI" unique_id=1187454824]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 180.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(0, 0, 48, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="MenuSection" type="NinePatchRect" parent="UI" unique_id=369588291]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 590.0
+offset_bottom = 180.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_iol8j")
+region_rect = Rect2(64, 0, 80, 64)
+patch_margin_left = 36
+patch_margin_top = 28
+patch_margin_right = 36
+patch_margin_bottom = 28
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Blobby" type="Sprite2D" parent="UI" unique_id=1318529811]
+position = Vector2(168, 407)
+scale = Vector2(8, 8)
+texture = ExtResource("3_tiut4")
+region_enabled = true
+region_rect = Rect2(2, 9, 18, 13)
+
+[node name="MenuButtonsArray" type="Control" parent="UI" unique_id=1573758075]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MenuButtonsArray" unique_id=2084423400]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 472.0
+offset_bottom = 720.0
+theme_override_constants/margin_top = 44
+theme_override_constants/margin_bottom = 44
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MenuButtonsArray/MarginContainer" unique_id=1181153141]
+layout_mode = 2
+theme_override_constants/separation = 88
+
+[node name="Home" type="Button" parent="UI/MenuButtonsArray/MarginContainer/VBoxContainer" unique_id=1269098005]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_mj5lg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i6lef")
+theme_override_styles/hover = SubResource("StyleBoxTexture_70i5f")
+text = "										 "
+
+[node name="Settings" type="Button" parent="UI/MenuButtonsArray/MarginContainer/VBoxContainer" unique_id=1158402225]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_13sgg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i42df")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7jp70")
+text = " "
+
+[node name="Blobby" type="Button" parent="UI/MenuButtonsArray/MarginContainer/VBoxContainer" unique_id=950393079]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_ufwb2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mxgkd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g6gyw")
+text = " "
+
+[node name="Skills" type="Button" parent="UI/MenuButtonsArray/MarginContainer/VBoxContainer" unique_id=428923592]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_6cdou")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3dmrc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_81l6r")
+text = " "
+
+[node name="Button" type="Button" parent="UI" unique_id=1569316801]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 33.0
+offset_right = 322.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 48
+text = "Game (Tab)"
+
+[node name="MenuTab" type="Control" parent="." unique_id=342881163]
+unique_name_in_owner = true
+visible = false
+z_index = 4
+layout_mode = 3
+anchors_preset = 0
+
+[node name="SkillTree" parent="MenuTab" unique_id=1891018381 instance=ExtResource("4_hmhl7")]
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+skill_tree_button_group = SubResource("ButtonGroup_igboo")
+
+[node name="Blobby" parent="MenuTab" unique_id=1790883149 instance=ExtResource("5_p6lyk")]
+layout_mode = 0
+
+[node name="LabGUI" type="Control" parent="." unique_id=1256354608]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GUI" type="Sprite2D" parent="LabGUI" unique_id=79457857]
+position = Vector2(640, 360)
+scale = Vector2(8, 8)
+texture = ExtResource("6_giame")
+
+[connection signal="pressed" from="UI/MenuButtonsArray/MarginContainer/VBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="UI/MenuButtonsArray/MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="UI/MenuButtonsArray/MarginContainer/VBoxContainer/Blobby" to="." method="_on_blobby_pressed"]
+[connection signal="pressed" from="UI/MenuButtonsArray/MarginContainer/VBoxContainer/Skills" to="." method="_on_skills_pressed"]
+[connection signal="pressed" from="UI/Button" to="." method="_on_button_pressed"]

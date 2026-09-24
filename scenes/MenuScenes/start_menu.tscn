@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfgr3i0tt7yu6"]
 
 [ext_resource type="Script" uid="uid://qdnu3ixyh0cu" path="res://start_menu.gd" id="1_thu50"]
-[ext_resource type="Texture2D" uid="uid://cn8b3fiwo7rif" path="res://graphics/MenuUI.png" id="2_m7x51"]
+[ext_resource type="Texture2D" uid="uid://cn8b3fiwo7rif" path="res://graphics/menus/MenuUI.png" id="2_m7x51"]
 
 [node name="StartMenu" type="Node2D" unique_id=1068553204]
 script = ExtResource("1_thu50")
@@ -34,7 +34,7 @@ offset_right = 1464.0
 offset_bottom = 545.0
 scale = Vector2(0.6848449, 0.6848449)
 theme_override_font_sizes/font_size = 32
-text = "This is our game \"Coloor\". It is currently in the development process. For the first ship. You can move, change colors, shoot, jump, and dash. Use \"A\" and \"D\" for move; \"Q\" and \"E\" to dash; \"W\" to jump; and \"S\" to shoot. Also you can open the color changing menu when you press \"Tab\" or press the button on your screen.
+text = "This is our game \"Coloor\". It is currently in the development process. For the first ship. You can move, change colors, shoot, jump, and dash. Use \"A\" and \"D\" for move; \"Q\" and \"E\" to dash; \"W\" to jump; and \"S\" to shoot. Also you can open the color changing menu when you press \"Esc\" or press the button on your screen.
 
 You can break glasses with the bullets.
 

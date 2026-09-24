@@ -26,7 +26,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("down") and can_shoot:
 		shoot()
 	if event.is_action_pressed("menu"):
-		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/MenuScenes/menu.tscn")
 
 
 func move(delta):

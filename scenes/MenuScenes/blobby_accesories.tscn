@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bv38fl5ht5rv4"]
+
+[node name="BlobbyAccesories" type="Control" unique_id=1790883149]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=56012795]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="VScrollBar" type="VScrollBar" parent="MarginContainer" unique_id=678264838]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VScrollBar" unique_id=666691749]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VScrollBar/HBoxContainer" unique_id=537722004]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VScrollBar/HBoxContainer" unique_id=711220417]
+layout_mode = 2
