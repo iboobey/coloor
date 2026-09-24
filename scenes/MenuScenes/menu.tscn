@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c3s3cughdqqqi" path="res://graphics/menus/MenuLabColorWheels.png" id="6_lmlug"]
 [ext_resource type="Texture2D" uid="uid://bjk6xxwryo1ei" path="res://graphics/menus/MenuLabGUI.png" id="6_nd6bq"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_nd6bq"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_lmlug"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2uoe1"]
 texture = ExtResource("5_lmlug")
@@ -109,13 +109,6 @@ region_rect = Rect2(76, 102, 26, 5)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7lha"]
 texture = ExtResource("5_lmlug")
 region_rect = Rect2(140, 102, 26, 5)
-
-[sub_resource type="InputEventKey" id="InputEventKey_nd6bq"]
-device = -1
-keycode = 4194305
-
-[sub_resource type="Shortcut" id="Shortcut_igboo"]
-events = [SubResource("InputEventKey_nd6bq")]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1yfpx"]
 atlas = ExtResource("6_lmlug")
@@ -416,6 +409,8 @@ animations = [{
 
 [node name="Menu" type="Node2D" unique_id=817584688]
 script = ExtResource("1_f8kdt")
+metadata/_edit_vertical_guides_ = [232.0]
+metadata/_edit_horizontal_guides_ = [440.0]
 
 [node name="MenuTab" type="Control" parent="." unique_id=1126943479]
 unique_name_in_owner = true
@@ -430,7 +425,7 @@ offset_left = 167.0
 offset_top = -1432.0
 offset_right = 207.0
 offset_bottom = -1392.0
-skill_tree_button_group = SubResource("ButtonGroup_nd6bq")
+skill_tree_button_group = SubResource("ButtonGroup_lmlug")
 
 [node name="BlobbyAccesories" parent="MenuTab" unique_id=1790883149 instance=ExtResource("5_2uoe1")]
 visible = false
@@ -503,16 +498,15 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_chfcg")
 
 [node name="MenuGame" type="Button" parent="LabGUI/Buttons" unique_id=339605151]
 layout_mode = 0
-offset_left = 15.5
-offset_top = 3.25
-offset_right = 41.5
-offset_bottom = 8.25
+offset_left = 16.0
+offset_top = 3.0
+offset_right = 42.0
+offset_bottom = 8.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_d5xgu")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_5x85d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_btcir")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_kelya")
 theme_override_styles/focus = SubResource("StyleBoxTexture_o7lha")
-shortcut = SubResource("Shortcut_igboo")
 
 [node name="ColorWheels" type="Control" parent="LabGUI" unique_id=2033518569]
 anchors_preset = 0
@@ -521,27 +515,33 @@ offset_bottom = 40.0
 scale = Vector2(8, 8)
 
 [node name="RedWheel" type="AnimatedSprite2D" parent="LabGUI/ColorWheels" unique_id=344979327]
+unique_name_in_owner = true
 position = Vector2(13, 17)
 sprite_frames = SubResource("SpriteFrames_apsbx")
 animation = &"Red"
 autoplay = "Red"
+frame = 12
 
 [node name="GreenWheel" type="AnimatedSprite2D" parent="LabGUI/ColorWheels" unique_id=180310355]
+unique_name_in_owner = true
 position = Vector2(29, 17)
 sprite_frames = SubResource("SpriteFrames_wlarf")
 animation = &"Green"
 autoplay = "Green"
+frame = 12
 
 [node name="BlueWheel" type="AnimatedSprite2D" parent="LabGUI/ColorWheels" unique_id=1377757416]
+unique_name_in_owner = true
 position = Vector2(45, 17)
 sprite_frames = SubResource("SpriteFrames_jea4y")
 animation = &"Blue"
 autoplay = "Blue"
+frame = 12
 
 [node name="Blobby" type="Sprite2D" parent="." unique_id=1030457353]
 unique_name_in_owner = true
-position = Vector2(218, 489)
-scale = Vector2(8, 8)
+position = Vector2(232, 440)
+scale = Vector2(12, 12)
 texture = ExtResource("3_2uoe1")
 region_enabled = true
 region_rect = Rect2(2, 9, 18, 13)
