@@ -25,6 +25,9 @@ func _process(_delta: float) -> void:
 	player_module = Color.from_rgba8(red,green,blue)
 	blobby.modulate = player_module
 	
+	if Global.sombrero == true:
+		%Sombrero.visible = true
+	else: %Sombrero.visible = false
 	color_wheel()
 
 
@@ -51,7 +54,7 @@ func _on_skill_tree_pressed() -> void:
 
 
 func _on_menu_game_pressed() -> void:
-	get_tree().change_scene_to_file("res://game.tscn")
+	get_tree().change_scene_to_file("res://Levels/level1.tscn")
 
 
 func color_wheel():

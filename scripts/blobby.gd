@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var blobby: AnimatedSprite2D = %Blobby
+
 @export var dash_bar: TextureProgressBar
 @export var dash_duration: float = 0.1
 @export var dash_cooldown: float = 1
@@ -33,15 +35,15 @@ func _physics_process(delta: float) -> void:
 		facing_dir = input_axis
 	
 	if facing_dir >0:
-		$Sprite2D.flip_h = false
+		blobby.flip_h = false
 	elif facing_dir <0:
-		$Sprite2D.flip_h = true
+		blobby.flip_h = true
 	
 	
 	if Input.is_action_just_pressed("dash") and can_dash:
 		perform_dash(facing_dir)
 		
-	$Sprite2D.modulate = Color.from_rgba8(Global.player_red, Global.player_green, Global.player_blue)
+	blobby.modulate = Color.from_rgba8(Global.player_red, Global.player_green, Global.player_blue)
 	
 	move(delta)
 	move_and_slide()
@@ -53,6 +55,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		marker_instance.visible = false
 
+<<<<<<< HEAD
+=======
+func _process(_delta: float) -> void: 
+	if Global.sombrero == true:
+		%Sombrero.visible = true
+	else: %Sombrero.visible = false
+
+
+>>>>>>> c13df932b58b6f95fa78e718a5acfcb4eff87ece
 func perform_dash(_dir:float) -> void:
 	if not can_dash:
 		return
@@ -73,6 +84,7 @@ func perform_dash(_dir:float) -> void:
 	
 	await get_tree().create_timer(dash_cooldown - dash_duration).timeout
 	can_dash=true
+
 
 func _exit_tree() -> void:
 	if is_instance_valid(marker_instance):
@@ -113,10 +125,15 @@ func move(delta):
 
 func shoot() -> void:
 	can_shoot = false
+	animate("shoot")
+	await blobby.frame_changed
+	await blobby.frame_changed
+	await blobby.frame_changed
+	await blobby.frame_changed
 	var bullet = BULLET_SCENE.instantiate()
-	var dir = -1 if $Sprite2D.flip_h else 1
+	var dir = -1 if blobby.flip_h else 1
 	bullet.direction = dir
-	bullet.global_position = global_position
+	bullet.global_position = global_position + Vector2(7,-2)
 	get_tree().current_scene.add_child(bullet)
 	await get_tree().create_timer(shoot_cooldown).timeout
 	can_shoot = true
@@ -125,3 +142,6 @@ func shoot() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
+
+func animate(animation):
+	blobby.play(animation)

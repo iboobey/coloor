@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://bsdg3lo7syqed"]
 
 [ext_resource type="Script" uid="uid://baxvsa322o0bw" path="res://scripts/menu.gd" id="1_f8kdt"]
-[ext_resource type="Texture2D" uid="uid://bbesv3tnusah1" path="res://graphics/BlobbyAnimation.png" id="3_2uoe1"]
+[ext_resource type="Texture2D" uid="uid://c5evbeyayg18i" path="res://graphics/BlobbyAnimation.png" id="3_2uoe1"]
 [ext_resource type="PackedScene" uid="uid://bv38fl5ht5rv4" path="res://scenes/MenuScenes/blobby_accesories.tscn" id="5_2uoe1"]
 [ext_resource type="Texture2D" uid="uid://eauclnxab6uq" path="res://graphics/menus/MenuLabButtons.png" id="5_lmlug"]
 [ext_resource type="PackedScene" uid="uid://cjyaynjj7k57x" path="res://scenes/MenuScenes/skill_tree.tscn" id="5_nd6bq"]
 [ext_resource type="Texture2D" uid="uid://c3s3cughdqqqi" path="res://graphics/menus/MenuLabColorWheels.png" id="6_lmlug"]
 [ext_resource type="Texture2D" uid="uid://bjk6xxwryo1ei" path="res://graphics/menus/MenuLabGUI.png" id="6_nd6bq"]
+[ext_resource type="Texture2D" uid="uid://dwr1v3su8no2e" path="res://graphics/blobbyaccesories/SombreroHat.png" id="8_1yfpx"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_lmlug"]
 
@@ -416,6 +417,9 @@ z_index = 7
 layout_mode = 3
 anchors_preset = 0
 
+[node name="BlobbyAccesories" parent="MenuTab" unique_id=1790883149 instance=ExtResource("5_2uoe1")]
+layout_mode = 0
+
 [node name="SkillTree" parent="MenuTab" unique_id=1891018381 instance=ExtResource("5_nd6bq")]
 visible = false
 layout_mode = 0
@@ -424,9 +428,6 @@ offset_top = -1432.0
 offset_right = 207.0
 offset_bottom = -1392.0
 skill_tree_button_group = SubResource("ButtonGroup_lmlug")
-
-[node name="BlobbyAccesories" parent="MenuTab" unique_id=1790883149 instance=ExtResource("5_2uoe1")]
-layout_mode = 0
 
 [node name="LabGUI" type="Control" parent="." unique_id=32055958]
 layout_mode = 3
@@ -542,6 +543,16 @@ scale = Vector2(12, 12)
 texture = ExtResource("3_2uoe1")
 region_enabled = true
 region_rect = Rect2(2, 9, 18, 13)
+
+[node name="Accesories" type="Node2D" parent="LabGUI" unique_id=373187476]
+scale = Vector2(12, 12)
+
+[node name="Sombrero" type="Sprite2D" parent="LabGUI/Accesories" unique_id=1256389997]
+unique_name_in_owner = true
+position = Vector2(20.666666, 29.916668)
+texture = ExtResource("8_1yfpx")
+region_enabled = true
+region_rect = Rect2(4, 4, 17, 9)
 
 [connection signal="pressed" from="LabGUI/Buttons/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="LabGUI/Buttons/Settings" to="." method="_on_settings_pressed"]
