@@ -54,16 +54,12 @@ func _physics_process(delta: float) -> void:
 		marker_instance.position = Vector2((facing_dir * actual_dash_distance+10), 0)
 	else:
 		marker_instance.visible = false
-
-<<<<<<< HEAD
-=======
+	
 func _process(_delta: float) -> void: 
 	if Global.sombrero == true:
 		%Sombrero.visible = true
 	else: %Sombrero.visible = false
-
-
->>>>>>> c13df932b58b6f95fa78e718a5acfcb4eff87ece
+	
 func perform_dash(_dir:float) -> void:
 	if not can_dash:
 		return
