@@ -68,3 +68,8 @@ func shoot() -> void:
 	get_tree().current_scene.add_child(bullet)
 	await get_tree().create_timer(shoot_cooldown).timeout
 	can_shoot = true
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
