@@ -1,22 +1,78 @@
 [gd_scene format=3 uid="uid://bnhdw7wjf6a5k"]
 
 [ext_resource type="Script" uid="uid://b6oqe1g4i0ag4" path="res://scripts/blobby.gd" id="1_oiati"]
-[ext_resource type="Texture2D" uid="uid://diec86vttdueq" path="res://graphics/blobby base.png" id="2_nwil0"]
+[ext_resource type="Texture2D" uid="uid://c5evbeyayg18i" path="res://graphics/BlobbyAnimation.png" id="2_oiati"]
+[ext_resource type="Texture2D" uid="uid://dwr1v3su8no2e" path="res://graphics/blobbyaccesories/SombreroHat.png" id="3_nwil0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7wsd"]
 radius = 6.0
 
-[node name="Blobby" type="CharacterBody2D" unique_id=1304802922 node_paths=PackedStringArray("dash_bar") groups=["blobby"]]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwil0"]
+atlas = ExtResource("2_oiati")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1eew"]
+atlas = ExtResource("2_oiati")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjlew"]
+atlas = ExtResource("2_oiati")
+region = Rect2(144, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc4lo"]
+atlas = ExtResource("2_oiati")
+region = Rect2(216, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x31or"]
+atlas = ExtResource("2_oiati")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_apsbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwil0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1eew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjlew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc4lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x31or")
+}],
+"loop": 0,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[node name="Blobby" type="CharacterBody2D" unique_id=1304802922 groups=["blobby"]]
 script = ExtResource("1_oiati")
-dash_bar = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396790662 groups=["blobby"]]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_s7wsd")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1030650629 groups=["blobby"]]
-position = Vector2(0, -7)
-texture = ExtResource("2_nwil0")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=379680584 groups=["blobby"]]
 zoom = Vector2(4, 4)
+
+[node name="Blobby" type="AnimatedSprite2D" parent="." unique_id=1132144514]
+unique_name_in_owner = true
+position = Vector2(0, -10)
+sprite_frames = SubResource("SpriteFrames_apsbx")
+animation = &"shoot"
+
+[node name="Accesories" type="Node2D" parent="." unique_id=1248620403]
+scale = Vector2(12, 12)
+
+[node name="Sombrero" type="Sprite2D" parent="Accesories" unique_id=773613990]
+unique_name_in_owner = true
+position = Vector2(0, -1.1666667)
+scale = Vector2(0.083, 0.083)
+texture = ExtResource("3_nwil0")
+region_enabled = true
+region_rect = Rect2(4, 4, 17, 9)
