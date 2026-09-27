@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c3s3cughdqqqi" path="res://graphics/menus/MenuLabColorWheels.png" id="6_lmlug"]
 [ext_resource type="Texture2D" uid="uid://bjk6xxwryo1ei" path="res://graphics/menus/MenuLabGUI.png" id="6_nd6bq"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_twxtr"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_lmlug"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2uoe1"]
 texture = ExtResource("5_lmlug")
@@ -423,7 +423,7 @@ offset_left = 167.0
 offset_top = -1432.0
 offset_right = 207.0
 offset_bottom = -1392.0
-skill_tree_button_group = SubResource("ButtonGroup_twxtr")
+skill_tree_button_group = SubResource("ButtonGroup_lmlug")
 
 [node name="BlobbyAccesories" parent="MenuTab" unique_id=1790883149 instance=ExtResource("5_2uoe1")]
 layout_mode = 0
