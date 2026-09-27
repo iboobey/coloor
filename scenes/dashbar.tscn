@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cgjljosqfvjgp"]
+
+[sub_resource type="GDScript" id="GDScript_oiati"]
+script/source = "extends CanvasLayer
+
+@onready var dash_bar: TextureProgressBar = $DashProgressBar
+
+func _process(delta: float) -> void:
+	var blobby = get_tree().get_first_node_in_group(\"blobby\")
+	if blobby:
+		dash_bar.value = blobby.dash_cooldown - blobby.dash_timer
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oiati"]
+load_path = "res://.godot/imported/dashbarorigin.png-345e9f6ef0ef2001045771803b751e33.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a1eew"]
+load_path = "res://.godot/imported/dashbarend.png-320ccc5d9684f93604c9d8a20924c8e3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nwil0"]
+load_path = "res://.godot/imported/dashbar1.png-8ba19d2898782e9da5bba79fd125f752.ctex"
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1537475732]
+script = SubResource("GDScript_oiati")
+
+[node name="DashProgressBar" type="TextureProgressBar" parent="." unique_id=433272736]
+z_index = 2
+offset_left = -176.0
+offset_top = 27.0
+offset_right = -112.0
+offset_bottom = 91.0
+max_value = 1.0
+texture_under = SubResource("CompressedTexture2D_oiati")
+texture_over = SubResource("CompressedTexture2D_a1eew")
+texture_progress = SubResource("CompressedTexture2D_nwil0")

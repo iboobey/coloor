@@ -6,18 +6,17 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7wsd"]
 radius = 6.0
 
-[node name="Blobby" type="CharacterBody2D" unique_id=1304802922]
+[node name="Blobby" type="CharacterBody2D" unique_id=1304802922 node_paths=PackedStringArray("dash_bar") groups=["blobby"]]
 script = ExtResource("1_oiati")
+dash_bar = NodePath("")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396790662]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396790662 groups=["blobby"]]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_s7wsd")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1030650629]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1030650629 groups=["blobby"]]
 position = Vector2(0, -7)
 texture = ExtResource("2_nwil0")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=379680584]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=379680584 groups=["blobby"]]
 zoom = Vector2(4, 4)
-
-[node name="DashTimer" type="Timer" parent="." unique_id=1807839519]

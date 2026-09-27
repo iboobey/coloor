@@ -298,10 +298,10 @@ position = Vector2(1198, -147)
 [node name="Level1Glass26" parent="." unique_id=1887444481 instance=ExtResource("11_20vxw")]
 position = Vector2(1198, -175)
 
-[node name="Blobby" parent="." unique_id=1304802922 instance=ExtResource("15_41rou")]
-position = Vector2(-109, -174)
-
 [node name="Area2D17" parent="." unique_id=1401418872 instance=ExtResource("16_2oha0")]
 position = Vector2(1244, -162)
+
+[node name="Blobby" parent="." unique_id=1304802922 instance=ExtResource("15_41rou")]
+position = Vector2(-110, -173)
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_button_pressed"]
