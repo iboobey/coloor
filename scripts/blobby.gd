@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		dash_timer -= delta
 		if dash_bar:
 			dash_bar.value = dash_cooldown - dash_timer
-	facing_dir = -1 if $Sprite2D.flip_h else 1
+	facing_dir = -1 if blobby.flip_h else 1
 	
 	var input_axis := Input.get_axis("left","right")
 	if input_axis != 0:
@@ -55,15 +55,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		marker_instance.visible = false
 
-<<<<<<< HEAD
-=======
 func _process(_delta: float) -> void: 
 	if Global.sombrero == true:
 		%Sombrero.visible = true
 	else: %Sombrero.visible = false
 
 
->>>>>>> c13df932b58b6f95fa78e718a5acfcb4eff87ece
 func perform_dash(_dir:float) -> void:
 	if not can_dash:
 		return
