@@ -24,7 +24,7 @@ region_rect = Rect2(258, 33, 14, 14)
 texture = ExtResource("1_2pb5w")
 region_rect = Rect2(258, 49, 14, 14)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ko7qq"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88yxh"]
 texture = ExtResource("3_ukqb5")
 region_rect = Rect2(24, 113, 2, 9)
 
@@ -37,11 +37,9 @@ texture = ExtResource("3_ukqb5")
 region_rect = Rect2(56, 112, 2, 9)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5hxn"]
-content_margin_top = 2.0
-content_margin_bottom = 2.0
+content_margin_right = 3.0
 texture = ExtResource("3_ukqb5")
 texture_margin_left = 1.0
-expand_margin_left = 4.0
 region_rect = Rect2(185, 28, 2, 58)
 
 [resource]
@@ -71,7 +69,7 @@ Button/styles/focus = SubResource("StyleBoxTexture_2pb5w")
 Button/styles/hover = SubResource("StyleBoxTexture_ukqb5")
 Button/styles/normal = SubResource("StyleBoxTexture_wlarf")
 Button/styles/pressed = SubResource("StyleBoxTexture_jea4y")
-VScrollBar/styles/grabber = SubResource("StyleBoxTexture_ko7qq")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_88yxh")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_1yfpx")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_twxtr")
 VScrollBar/styles/scroll = SubResource("StyleBoxTexture_j5hxn")

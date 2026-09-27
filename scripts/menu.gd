@@ -15,6 +15,9 @@ var blue_frame : int = 0
 @onready var blobby_accesories: Control = $MenuTab/BlobbyAccesories
 
 
+func _ready() -> void:
+	hide_instances()
+
 func _process(_delta: float) -> void:
 	red = Global.player_red
 	green = Global.player_green
@@ -27,8 +30,7 @@ func _process(_delta: float) -> void:
 
 func hide_instances():
 	skill_tree.hide()
-	blobby_accesories.hide()
-
+	blobby_accesories.do_hide = true
 
 func _on_home_pressed() -> void:
 	hide_instances()
@@ -40,7 +42,7 @@ func _on_settings_pressed() -> void:
 
 func _on_blobby_accesories_pressed() -> void:
 	hide_instances()
-	blobby_accesories.show()
+	blobby_accesories.do_hide = false
 
 
 func _on_skill_tree_pressed() -> void:
