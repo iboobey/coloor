@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://bt8eio7iqbppr" path="res://scripts/blobby_accesories.gd" id="1_3cvn8"]
 [ext_resource type="Texture2D" uid="uid://diec86vttdueq" path="res://graphics/blobby base.png" id="1_hto8l"]
 [ext_resource type="Texture2D" uid="uid://duy3823bopvun" path="res://graphics/inventory/BlobbyAccesoryInventory.png" id="2_c6l8l"]
+[ext_resource type="Texture2D" uid="uid://dy2g6mpl3b50c" path="res://graphics/blobbyaccesories/SombreroHat.png" id="3_3cvn8"]
 [ext_resource type="FontFile" uid="uid://bq0x555v7wbhn" path="res://graphics/fonts/PressStart2P-Regular.ttf" id="3_8cweo"]
 [ext_resource type="Theme" uid="uid://cncoee1awmhwu" path="res://resources/themes/accesoryinventory.tres" id="4_c6l8l"]
+[ext_resource type="Script" uid="uid://b62sbx7pj6xm6" path="res://scripts/equip_unequip.gd" id="6_k4sex"]
 
 [node name="BlobbyAccesories" type="Control" unique_id=1790883149]
 layout_mode = 3
@@ -43,7 +45,9 @@ layout_mode = 2
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/ScrollContainer/HBoxContainer/Accesories/Accesory" unique_id=846639806]
 position = Vector2(18, 8)
 scale = Vector2(0.7353485, 0.7353485)
-texture = ExtResource("1_hto8l")
+texture = ExtResource("3_3cvn8")
+region_enabled = true
+region_rect = Rect2(12, 12, 17, 9)
 
 [node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/ScrollContainer/HBoxContainer/Accesories/Accesory" unique_id=1358328626]
 position = Vector2(18, 8)
@@ -222,11 +226,13 @@ region_rect = Rect2(170, 33, 18, 14)
 [node name="Equip-Unequip" type="VBoxContainer" parent="MarginContainer/ScrollContainer/HBoxContainer" unique_id=711220417]
 layout_mode = 2
 theme_override_constants/separation = 17
+script = ExtResource("6_k4sex")
 
 [node name="Equip-Unequip" type="Control" parent="MarginContainer/ScrollContainer/HBoxContainer/Equip-Unequip" unique_id=68167833]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/ScrollContainer/HBoxContainer/Equip-Unequip/Equip-Unequip" unique_id=902923206]
+[node name="Sombrero" type="Button" parent="MarginContainer/ScrollContainer/HBoxContainer/Equip-Unequip/Equip-Unequip" unique_id=902923206]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 88.59999
 offset_top = 0.5999975
@@ -312,10 +318,10 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/ScrollContainer/HBoxContainer/Equip-Unequip/Equip-Unequip7" unique_id=2017731873]
 layout_mode = 0
-offset_left = 88.59999
-offset_top = 0.5999975
-offset_right = 100.59999
-offset_bottom = 12.5999975
+offset_left = 89.34999
+offset_top = 0.5999985
+offset_right = 101.34999
+offset_bottom = 12.599998
 scale = Vector2(1.167, 1.167)
 theme = ExtResource("4_c6l8l")
 toggle_mode = true
@@ -413,14 +419,16 @@ theme_override_constants/separation = 17
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/ScrollContainer/HBoxContainer/AccNames/AccNames" unique_id=172355568]
+texture_filter = 1
 layout_mode = 0
-offset_left = 28.0
-offset_top = 2.0
-offset_right = 88.0
-offset_bottom = 14.0
-theme_override_fonts/font = ExtResource("3_8cweo")
-theme_override_font_sizes/font_size = 8
-text = "Blobby"
+offset_left = 15.5
+offset_top = 1.25
+offset_right = 145.1875
+offset_bottom = 32.5
+scale = Vector2(0.48, 0.48)
+theme = ExtResource("4_c6l8l")
+text = "Sombrero"
+horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
@@ -681,3 +689,5 @@ position = Vector2(46, 8)
 texture = ExtResource("2_c6l8l")
 region_enabled = true
 region_rect = Rect2(191, 33, 64, 14)
+
+[connection signal="toggled" from="MarginContainer/ScrollContainer/HBoxContainer/Equip-Unequip/Equip-Unequip/Sombrero" to="MarginContainer/ScrollContainer/HBoxContainer/Equip-Unequip" method="_on_sombrero_toggled"]
