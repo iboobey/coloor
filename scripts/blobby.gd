@@ -53,7 +53,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		marker_instance.visible = false
 
-
 func perform_dash(_dir:float) -> void:
 	if not can_dash:
 		return
