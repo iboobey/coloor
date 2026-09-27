@@ -9,19 +9,20 @@ This is our game "Coloor". It is currently in the development process. In our ga
 ___
 ## Current Features
 
-For the first ship. You can move, change colors, shoot, jump, and dash. Use "A" and "D" for move; "Q" and "E" to dash; "W" to jump; and "S" to shoot. Also you can open the color changing menu when you press "Tab" or press the button on your screen.
+# First Ship
+  For the first ship. You can move, change colors, shoot, jump, and dash. Use "A" and "D" for move; "Q" and "E" to dash; "W" to jump; and "S" to shoot. Also you can open the color    changing menu when you press "Tab" or press the button on your screen.
+  You can break glasses with the bullets.
 
-You can break glasses with the bullets.
+## Second Ship
+  In the second ship we added accesory selection, a sombrero hat, a menu redesign , level 1, level 2 (ADD WHAT ÇINAR DO) . 
 
 ___
 ## Upcoming Features
 
-- Selecting your own accessories (skin)
 - Level selection
 - Colored walls
 - Color abilities
 - Sounds
-- A redesign for the menu screens
 
 ___
 ## Some Photos Of The Development
