@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dv4tjt2otc62g"]
+
+[ext_resource type="Texture2D" uid="uid://8lfswqtk2s51" path="res://graphics/mysteriouspurpleliquid.png" id="1_jb45b"]
+
+[sub_resource type="GDScript" id="GDScript_43dkn"]
+script/source = "extends Area2D
+
+
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == \"Blobby\":
+		var spawn_point = get_tree().current_scene.find_child(\"Spawnpoint\",true,false)
+		
+		if spawn_point:
+			body.global_position = spawn_point.global_position
+			
+			if body is CharacterBody2D:
+				body.velocity=Vector2.ZERO
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcvcn"]
+size = Vector2(27, 37)
+
+[node name="Area2D" type="Area2D" unique_id=282748131]
+script = SubResource("GDScript_43dkn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=744667972]
+z_index = 1
+position = Vector2(-18.5, 0)
+scale = Vector2(0.421875, 1)
+texture = ExtResource("1_jb45b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=633862237]
+position = Vector2(-18.5, 13.5)
+shape = SubResource("RectangleShape2D_jcvcn")

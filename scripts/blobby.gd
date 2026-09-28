@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var walk_speed = 100
 @export var jump_power = -300
 var can_dash : bool = true
-var dash_timer: float = 0
+var dash_timer: float = 0.0
 var is_dashing: bool = false
 var facing_dir: float = 1
 
@@ -22,13 +22,27 @@ func _ready() -> void:
 	marker_instance = DASH_MARKER_SCENE.instantiate()
 	add_child(marker_instance)
 	marker_instance.visible = false
+	
+	if dash_bar:
+		dash_bar.value = dash_bar.max_value
 
 func _physics_process(delta: float) -> void:
 	if not can_dash:
 		dash_timer -= delta
+		print("dash_timer: ", dash_timer)
+	
+	
+	if dash_bar:
+		var progress = (1.0 -(dash_timer/dash_cooldown)) * 100.0
+		dash_bar.value = clamp(progress,0,100)
+		print("bar value: ", dash_bar.value)
+	
+	
+	
+	if dash_timer <= 0:
+		can_dash = true
 		if dash_bar:
-			dash_bar.value = dash_cooldown - dash_timer
-	facing_dir = -1 if blobby.flip_h else 1
+			dash_bar.value = 100
 	
 	var input_axis := Input.get_axis("left","right")
 	if input_axis != 0:
@@ -51,24 +65,15 @@ func _physics_process(delta: float) -> void:
 	if can_dash:
 		marker_instance.visible = true
 		var actual_dash_distance = dash_speed * dash_duration
-		marker_instance.position = Vector2((facing_dir * actual_dash_distance+10), 0)
+		marker_instance.position = Vector2((facing_dir * (actual_dash_distance+10)), 0)
 	else:
 		marker_instance.visible = false
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> 9c4808969db53aa1d4584483fc8e75fbf20b4fd8
 func _process(_delta: float) -> void: 
 	if Global.sombrero == true:
 		%Sombrero.visible = true
 	else: %Sombrero.visible = false
-<<<<<<< HEAD
-	
-=======
 
-
->>>>>>> 9c4808969db53aa1d4584483fc8e75fbf20b4fd8
 func perform_dash(_dir:float) -> void:
 	if not can_dash:
 		return
@@ -87,8 +92,7 @@ func perform_dash(_dir:float) -> void:
 	await get_tree().create_timer(dash_duration).timeout
 	is_dashing = false
 	
-	await get_tree().create_timer(dash_cooldown - dash_duration).timeout
-	can_dash=true
+
 
 
 func _exit_tree() -> void:

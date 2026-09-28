@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dtw1xx5gvbyja" path="res://scenes/labplatform.tscn" id="2_w6yvm"]
 [ext_resource type="PackedScene" uid="uid://t6ji8ovus6vc" path="res://scenes/leftbottomwall.tscn" id="3_jcvcn"]
 [ext_resource type="PackedScene" uid="uid://dww3rbk85gu7e" path="res://scenes/leftwall.tscn" id="4_0ttnk"]
-[ext_resource type="PackedScene" uid="uid://dw5g1jcue8iyu" path="res://scenes/ventescape.tscn" id="5_v3vm6"]
 [ext_resource type="PackedScene" uid="uid://d3d8r4c0lac1g" path="res://scenes/lefttopwall.tscn" id="6_16yl7"]
 [ext_resource type="PackedScene" uid="uid://dahg2rb2d0kv3" path="res://scenes/ceiling.tscn" id="7_3slvs"]
 [ext_resource type="PackedScene" uid="uid://lpvyrb1pdg78" path="res://scenes/mysteriouspurpleliquid.tscn" id="8_cnrwi"]
@@ -17,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://fx8ogbmmnne6" path="res://scenes/movingplatform.tscn" id="15_7t8bs"]
 [ext_resource type="PackedScene" uid="uid://b5gl6hkts3o8b" path="res://scenes/platform.tscn" id="16_jcvcn"]
 [ext_resource type="Texture2D" uid="uid://qdxfdh6f1qjv" path="res://graphics/textsign.png" id="17_0ttnk"]
+[ext_resource type="PackedScene" uid="uid://dv4tjt2otc62g" path="res://scenes/mysteriouspurpledroplet.tscn" id="18_0ttnk"]
+[ext_resource type="PackedScene" uid="uid://b6n7jy2rrtk8w" path="res://scenes/ventprogress1.tscn" id="18_v3vm6"]
 
 [node name="Level2" type="Node2D" unique_id=422233380]
 
@@ -131,11 +132,11 @@ text = "Press R to Reset!"
 [node name="Label" type="Label" parent="Label" unique_id=2093223019]
 z_index = 1
 layout_mode = 0
-offset_left = 172.0
-offset_top = -124.0
-offset_right = 296.0
-offset_bottom = -101.0
-text = "Press Q to Dash!"
+offset_left = 170.0
+offset_top = -123.0
+offset_right = 333.0
+offset_bottom = -100.0
+text = "Dash disables falling!"
 
 [node name="Textsign" type="Sprite2D" parent="." unique_id=1694551395]
 position = Vector2(-2.1457672e-06, -65)
@@ -143,18 +144,12 @@ scale = Vector2(3.5, 1.2812501)
 texture = ExtResource("17_0ttnk")
 
 [node name="Textsign" type="Sprite2D" parent="Textsign" unique_id=572044834]
-position = Vector2(49.42857, -94.43902)
-scale = Vector2(1.0545456, 1.2812501)
+position = Vector2(54.285717, -94.43902)
+scale = Vector2(1.4062501, 1.2625762)
 texture = ExtResource("17_0ttnk")
 
-[node name="Level1Glass4" parent="." unique_id=553888250 instance=ExtResource("14_ud3to")]
-position = Vector2(167, -161)
-
-[node name="Level1Glass5" parent="." unique_id=250630912 instance=ExtResource("14_ud3to")]
-position = Vector2(203, -161)
-
 [node name="Node2D8" parent="." unique_id=948020355 instance=ExtResource("16_jcvcn")]
-position = Vector2(143, -140)
+position = Vector2(174, -128)
 
 [node name="Level1Glass6" parent="." unique_id=377935992 instance=ExtResource("14_ud3to")]
 position = Vector2(96, -158)
@@ -190,28 +185,22 @@ position = Vector2(115, -222)
 position = Vector2(23, -192)
 
 [node name="Level1Glass9" parent="." unique_id=1031874708 instance=ExtResource("14_ud3to")]
-position = Vector2(-63, -210)
+position = Vector2(-44, -245)
 
 [node name="Level1Glass10" parent="." unique_id=714084312 instance=ExtResource("14_ud3to")]
-position = Vector2(-134, -210)
-
-[node name="Area2D7" parent="." unique_id=235094134 instance=ExtResource("8_cnrwi")]
-position = Vector2(-100, -227)
+position = Vector2(-125, -210)
 
 [node name="Node2D14" parent="." unique_id=1319394193 instance=ExtResource("16_jcvcn")]
-position = Vector2(-39, -227)
+position = Vector2(-21, -220)
 
 [node name="Node2D15" parent="." unique_id=1676692736 instance=ExtResource("16_jcvcn")]
-position = Vector2(-60, -227)
+position = Vector2(-41, -223)
 
 [node name="Node2D16" parent="." unique_id=1190532406 instance=ExtResource("16_jcvcn")]
-position = Vector2(-102, -289)
+position = Vector2(-99, -275)
 
 [node name="Level1Glass11" parent="." unique_id=322601053 instance=ExtResource("14_ud3to")]
-position = Vector2(-152, -238)
-
-[node name="Level1Glass12" parent="." unique_id=1570064462 instance=ExtResource("14_ud3to")]
-position = Vector2(-152, -209)
+position = Vector2(-125, -266)
 
 [node name="Node2D17" parent="." unique_id=779041802 instance=ExtResource("16_jcvcn")]
 position = Vector2(156, -222)
@@ -232,19 +221,28 @@ position = Vector2(2, -287)
 position = Vector2(-188, -287)
 
 [node name="Level1Glass14" parent="." unique_id=1272071569 instance=ExtResource("14_ud3to")]
-position = Vector2(-153, -266)
+position = Vector2(-64, -267)
 
 [node name="Level1Glass15" parent="." unique_id=745021627 instance=ExtResource("14_ud3to")]
-position = Vector2(-64, -248)
+position = Vector2(-125, -238)
 
 [node name="Level1Glass16" parent="." unique_id=1274411347 instance=ExtResource("14_ud3to")]
-position = Vector2(-64, -275)
+position = Vector2(-64, -238)
 
 [node name="Node2D19" parent="." unique_id=2061955342 instance=ExtResource("16_jcvcn")]
 position = Vector2(-38, -255)
 
 [node name="Level1Glass17" parent="." unique_id=1738404529 instance=ExtResource("14_ud3to")]
-position = Vector2(-134, -237)
+position = Vector2(-64, -210)
 
-[node name="Area2D" parent="." unique_id=1401418872 instance=ExtResource("5_v3vm6")]
-position = Vector2(-188, -224)
+[node name="Node2D20" parent="." unique_id=92530732 instance=ExtResource("16_jcvcn")]
+position = Vector2(-60, -223)
+
+[node name="Area2D7" parent="." unique_id=1703079862 instance=ExtResource("18_0ttnk")]
+position = Vector2(-64, -225)
+
+[node name="Area2D8" parent="." unique_id=276514988 instance=ExtResource("18_0ttnk")]
+position = Vector2(-91, -225)
+
+[node name="Area2D" parent="." unique_id=1401418872 instance=ExtResource("18_v3vm6")]
+position = Vector2(-189, -224)

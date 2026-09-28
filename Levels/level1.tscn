@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://cqmdlev4capby" path="res://scenes/righttopwall.tscn" id="14_3mc7j"]
 [ext_resource type="PackedScene" uid="uid://bnhdw7wjf6a5k" path="res://scenes/blobby.tscn" id="15_41rou"]
 [ext_resource type="PackedScene" uid="uid://byp4k07lqc27" path="res://scenes/ventprogress.tscn" id="16_2oha0"]
+[ext_resource type="Texture2D" uid="uid://b7vn4ncjqlw8a" path="res://graphics/dashbarorigin.png" id="17_sqs0x"]
+[ext_resource type="Texture2D" uid="uid://bmcrvjoj2pdld" path="res://graphics/dashbarend.png" id="18_vy400"]
+[ext_resource type="Texture2D" uid="uid://8ub1rta02ase" path="res://graphics/dashbar1.png" id="19_eaymk"]
 
 [sub_resource type="GDScript" id="GDScript_feb5d"]
 script/source = "extends Node2D
@@ -37,6 +40,10 @@ script = SubResource("GDScript_feb5d")
 position = Vector2(0, 5)
 shape = SubResource("WorldBoundaryShape2D_s7wsd")
 
+[node name="Blobby" parent="." unique_id=1304802922 node_paths=PackedStringArray("dash_bar") instance=ExtResource("15_41rou")]
+position = Vector2(-110, -173)
+dash_bar = NodePath("../CanvasLayer/TextureProgressBar")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1609618423]
 
 [node name="MenuButton" type="Button" parent="CanvasLayer" unique_id=1438374433]
@@ -46,6 +53,22 @@ offset_right = 222.0
 offset_bottom = 95.0
 theme_override_font_sizes/font_size = 32
 text = "Menu (Esc)"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1525579666]
+custom_minimum_size = Vector2(200, 30)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -196.0
+offset_right = 173.0
+offset_bottom = -2.0
+grow_vertical = 0
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("17_sqs0x")
+texture_over = ExtResource("18_vy400")
+texture_progress = ExtResource("19_eaymk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=312637075]
 
@@ -300,8 +323,5 @@ position = Vector2(1198, -175)
 
 [node name="Area2D17" parent="." unique_id=1401418872 instance=ExtResource("16_2oha0")]
 position = Vector2(1244, -162)
-
-[node name="Blobby" parent="." unique_id=1304802922 instance=ExtResource("15_41rou")]
-position = Vector2(-110, -173)
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_button_pressed"]

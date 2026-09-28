@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://t6ji8ovus6vc"]
+[gd_scene format=3 uid="uid://bk7enss6iw54t"]
 
-[ext_resource type="Texture2D" uid="uid://delsfxxcs2p33" path="res://graphics/leftbottomwall.png" id="1_x3s05"]
+[ext_resource type="Texture2D" uid="uid://delsfxxcs2p33" path="res://graphics/leftbottomwall.png" id="1_k71mc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7wsd"]
 size = Vector2(64, 63)
@@ -13,4 +13,5 @@ shape = SubResource("RectangleShape2D_s7wsd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=493265311]
 z_index = 1
-texture = ExtResource("1_x3s05")
+texture = ExtResource("1_k71mc")
+flip_h = true
