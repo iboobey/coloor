@@ -14,12 +14,12 @@ ___
   You can break glasses with the bullets.
 
 ## Second Ship
-  In the second ship we added accesory selection, a sombrero hat, a menu redesign , level 1, level 2 (ADD WHAT ÇINAR DO) . 
+  In the second ship we added accesory selection, a sombrero hat, a menu redesign, level 1, level 2, level 3, dash indicator, a new dash timer and new sprites.
 
 ___
 ## Upcoming Features
 
-- Level selection
+- Level selection (There isn't a selection screen currently)
 - Colored walls
 - Color abilities
 - Sounds
